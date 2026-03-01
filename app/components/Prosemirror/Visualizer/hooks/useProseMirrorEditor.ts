@@ -174,6 +174,9 @@ export function useProseMirrorEditor(onTransaction: OnTransactionCallback) {
           mousedown() {
             lastDomEventRef.current = 'mouse: mousedown';
           },
+          mousemove() {
+            lastDomEventRef.current = 'mouse: mousemove';
+          },
           mouseup() {
             lastDomEventRef.current = 'mouse: mouseup';
           },

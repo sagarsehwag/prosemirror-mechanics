@@ -11,10 +11,10 @@ type HeadingProps = {
 };
 
 const STYLES: Record<HeadingLevel, React.CSSProperties> = {
-  h1: { fontSize: 'var(--font-size-2xl)', fontWeight: 'var(--font-weight-bold)' },
-  h2: { fontSize: 'var(--font-size-2xl)', fontWeight: 'var(--font-weight-bold)' },
-  h3: { fontSize: 'var(--font-size-xl)', fontWeight: 'var(--font-weight-semibold)' },
-  h4: { fontSize: 'var(--font-size-lg)', fontWeight: 'var(--font-weight-semibold)' },
+  h1: { fontSize: 'var(--font-size-2xl)', fontWeight: 'var(--font-weight-bold)', fontFamily: 'var(--font-mono-code)' },
+  h2: { fontSize: 'var(--font-size-2xl)', fontWeight: 'var(--font-weight-bold)', fontFamily: 'var(--font-mono-code)' },
+  h3: { fontSize: 'var(--font-size-xl)', fontWeight: 'var(--font-weight-semibold)', fontFamily: 'var(--font-mono-code)' },
+  h4: { fontSize: 'var(--font-size-lg)', fontWeight: 'var(--font-weight-semibold)', fontFamily: 'var(--font-mono-code)' },
 };
 
 export function Heading({

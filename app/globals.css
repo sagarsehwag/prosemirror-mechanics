@@ -2,7 +2,7 @@
    Rich Text Editor Demo - Styles
    ======================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
     /* Spacing (shared across themes) */
@@ -30,7 +30,7 @@
     --transition-slow: 400ms ease;
 
     /* Typography */
-    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-sans: 'Avenir Next', 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-mono: 'Fira Code', monospace;
     --font-mono-code: 'JetBrains Mono', monospace;
     --font-size-4xs: 0.5rem;
@@ -141,12 +141,17 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 18px;
     scroll-behavior: smooth;
 }
 
 /* Code elements use JetBrains Mono */
 code {
+  font-family: var(--font-mono-code);
+}
+
+/* Headings use JetBrains Mono */
+h1, h2, h3, h4 {
   font-family: var(--font-mono-code);
 }
 
