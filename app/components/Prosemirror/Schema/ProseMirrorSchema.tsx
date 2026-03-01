@@ -25,7 +25,7 @@ export default function ProseMirrorSchema() {
         </CardHeader>
         <CardContent>
           <p>
-            Here&apos;s what a Prosemirror document actually looks like — the
+            Here&apos;s what a Prosemirror document actually looks like: the
             real data shape. We&apos;ll explain how the schema defines and
             enforces this structure below.
           </p>
@@ -267,7 +267,7 @@ export default function ProseMirrorSchema() {
         <CardContent>
           <p>
             By default, nodes with inline content allow <strong>all</strong>{' '}
-            marks. But some nodes shouldn&apos;t — headings often stay plain,
+            marks. But some nodes shouldn&apos;t. Headings often stay plain,
             and <code>code_block</code> should never have bold or links. Use the{' '}
             <code>marks</code> property on a node spec to control which marks
             are allowed.
@@ -276,16 +276,16 @@ export default function ProseMirrorSchema() {
             <div className='content-expr-item'>
               <code>marks: &quot;_&quot;</code>
               <span>
-                Wildcard — all marks allowed (default for inline content)
+                Wildcard: all marks allowed (default for inline content)
               </span>
             </div>
             <div className='content-expr-item'>
               <code>marks: &quot;&quot;</code>
-              <span>Empty string — no marks (plain text only)</span>
+              <span>Empty string: no marks (plain text only)</span>
             </div>
             <div className='content-expr-item'>
               <code>marks: &quot;strong em link&quot;</code>
-              <span>Space-separated list — only these marks allowed</span>
+              <span>Space-separated list: only these marks allowed</span>
             </div>
           </div>
           <div className='code-snippet doc-json-snippet'>
@@ -302,7 +302,7 @@ code_block: { content: "text*", group: "block", marks: "" }`}
           </div>
           <p className='section-note'>
             The value is a space-separated string of mark names or mark groups.
-            Invalid marks are stripped during transforms — e.g. pasting
+            Invalid marks are stripped during transforms. For example, pasting
             formatted text into a <code>code_block</code> loses the formatting.
           </p>
         </CardContent>
@@ -315,29 +315,29 @@ code_block: { content: "text*", group: "block", marks: "" }`}
         <CardContent>
           <ul className='schema-learn-list'>
             <li>
-              <strong>Content expressions</strong> — Regex-like: <code>+</code>{' '}
+              <strong>Content expressions:</strong> Regex-like: <code>+</code>{' '}
               one or more, <code>*</code> zero or more, <code>|</code> choice.
             </li>
             <li>
-              <strong>Node groups</strong> —{' '}
+              <strong>Node groups:</strong>{' '}
               <code>group: &quot;block&quot;</code> lets you write{' '}
               <code>block+</code> instead of listing types.
             </li>
             <li>
-              <strong>Order matters</strong> — When filling required content,
+              <strong>Order matters:</strong> When filling required content,
               Prosemirror uses the first type in the expression.
             </li>
             <li>
-              <strong>block+ for doc</strong> — Require at least one block so
+              <strong>block+ for doc:</strong> Require at least one block so
               empty nodes don&apos;t collapse in the browser.
             </li>
             <li>
-              <strong>Required types</strong> — Every schema must define a
+              <strong>Required types:</strong> Every schema must define a
               top-level node (default <code>doc</code>) and a <code>text</code>{' '}
               type.
             </li>
             <li>
-              <strong>DOM is derived</strong> — The view renders from state.
+              <strong>DOM is derived:</strong> The view renders from state.
               State is never parsed from the DOM.
             </li>
           </ul>

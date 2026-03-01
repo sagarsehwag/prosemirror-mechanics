@@ -62,7 +62,7 @@ export default function ProseMirrorState() {
         <CardContent>
           <p>
             Updates are never in-place. You create a transaction (steps) and
-            apply it. That returns a new EditorState — the old one is unchanged.
+            apply it. That returns a new EditorState; the old one is unchanged.
             This enables undo, redo, and collaborative editing.
           </p>
           <div className='state-flow-visual'>
@@ -90,7 +90,7 @@ const newState = state.apply(tr);
             />
           </div>
           <p className='state-callout'>
-            <strong>state.tr</strong> — A shortcut for{' '}
+            <strong>state.tr</strong> is a shortcut for{' '}
             <code>Transaction.create(state)</code>. Returns a transaction you
             can chain steps on (<code>tr.insertText()</code>,{' '}
             <code>tr.delete()</code>, etc.).
@@ -119,8 +119,8 @@ const newState = state.apply(tr);
           </div>
           <p className='section-note'>
             <code>doc</code> defaults to an empty paragraph if omitted.{' '}
-            <code>plugins</code> add history, keybindings, and more — see
-            Plugins tab.
+            <code>plugins</code> add history, keybindings, and more. See the
+            Plugins tab for details.
           </p>
         </CardContent>
       </Card>

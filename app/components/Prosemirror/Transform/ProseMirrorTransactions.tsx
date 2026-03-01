@@ -268,7 +268,7 @@ const newState = state.apply(tr);`}
             />
           </div>
           <p className='transactions-callout'>
-            <strong>Chaining</strong> — Each method returns the same transaction
+            <strong>Chaining:</strong> Each method returns the same transaction
             (mutated in place), so you can chain <code>insertText</code>,{' '}
             <code>delete</code>, <code>setSelection</code>,{' '}
             <code>setStoredMarks</code>, and more.

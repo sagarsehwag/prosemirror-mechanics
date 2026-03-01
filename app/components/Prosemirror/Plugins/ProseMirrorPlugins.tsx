@@ -24,7 +24,7 @@ export default function ProseMirrorPlugins() {
         </CardContent>
       </Card>
 
-      {/* 2. Plugin Spec — one section, one example */}
+      {/* 2. Plugin Spec: one section, one example */}
       <Card className='prosemirror-section'>
         <CardHeader>
           <h4>Plugin Spec</h4>
@@ -149,7 +149,7 @@ keymap({ "Mod-b": boldCommand });`}
             />
           </div>
           <p className='plugins-callout'>
-            <strong>Mod</strong> — Cross-platform modifier: <code>Cmd</code> on
+            <strong>Mod</strong>: Cross-platform modifier. <code>Cmd</code> on
             Mac, <code>Ctrl</code> elsewhere. <code>undo</code> and{' '}
             <code>redo</code> from history are commands.
           </p>
@@ -163,7 +163,7 @@ keymap({ "Mod-b": boldCommand });`}
         </CardHeader>
         <CardContent>
           <p>
-            Pass plugins when creating state. Order can matter — e.g. history
+            Pass plugins when creating state. Order can matter. For example, history
             should receive transactions before other plugins that might filter
             them.
           </p>

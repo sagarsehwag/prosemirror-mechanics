@@ -16,7 +16,7 @@ export const LIFECYCLE_STEPS: LifecycleStepDef[] = [
     label: 'Transaction',
     desc: 'Steps accumulated into a mutable transaction object',
     tooltip:
-      'The intercepted event is translated into a Transaction — a mutable object that collects one or more Steps ' +
+      'The intercepted event is translated into a Transaction: a mutable object that collects one or more Steps ' +
       '(ReplaceStep, AddMarkStep, ReplaceAroundStep). ' +
       'Plugins can append their own steps or metadata. ' +
       'The transaction is then dispatched via view.dispatch(tr).',
@@ -29,7 +29,7 @@ export const LIFECYCLE_STEPS: LifecycleStepDef[] = [
     tooltip:
       'Calling state.apply(tr) produces a brand-new, immutable EditorState. ' +
       'Each step is mapped over the document sequentially. ' +
-      'The old state remains untouched — structural sharing keeps this efficient. ' +
+      'The old state remains untouched. Structural sharing keeps this efficient. ' +
       'This is what powers undo/redo and collaborative editing.',
     color: 'slate',
   },

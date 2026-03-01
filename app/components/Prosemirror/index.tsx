@@ -28,11 +28,11 @@ const TAB_HEADINGS: Record<
   overview: {
     title: 'Prosemirror Overview',
     subtitle:
-      'Build rich text editors with a structured document model. State flows through transactions — schema enforces structure, and undo & collaboration come built-in.',
+      'Build rich text editors with a structured document model. State flows through transactions. Schema enforces structure, and undo and collaboration come built-in.',
   },
   schema: {
     title: 'Document Model',
-    subtitle: 'Schema defines node types, content expressions, and marks — the data shape of your document',
+    subtitle: 'Schema defines node types, content expressions, and marks: the data shape of your document',
   },
   state: {
     title: 'EditorState',
@@ -40,7 +40,7 @@ const TAB_HEADINGS: Record<
   },
   transform: {
     title: 'Transforms & Transactions',
-    subtitle: 'Immutable updates — steps applied to create new state, never mutate in place',
+    subtitle: 'Immutable updates: steps applied to create new state, never mutate in place',
   },
   view: {
     title: 'View',
@@ -48,7 +48,7 @@ const TAB_HEADINGS: Record<
   },
   positions: {
     title: 'Positions & Selection',
-    subtitle: 'Integer offsets into a flat token sequence — anchor, head, from, to',
+    subtitle: 'Integer offsets into a flat token sequence: anchor, head, from, to',
   },
   plugins: {
     title: 'Plugins',

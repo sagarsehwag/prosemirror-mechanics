@@ -27,7 +27,7 @@ export const STEPS = [
     sublabel: 'Immutable',
     desc: 'Returns new EditorState',
     code: 'const newState = state.apply(tr)',
-    detail: 'Old state unchanged — enables undo',
+    detail: 'Old state unchanged. Enables undo.',
     tooltip:
       'state.apply(tr) creates a new EditorState by mapping each step over the doc. Old state is unchanged (structural sharing). Plugin state is updated via state.apply.',
     color: 'green',

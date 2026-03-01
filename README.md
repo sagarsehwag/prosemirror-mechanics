@@ -29,13 +29,13 @@
 
 ## Prosemirror
 
-The main navigation focuses on **Prosemirror** — Marijn Haverbeke's toolkit for building editors. Explore core concepts with interactive demos:
+The main navigation focuses on **Prosemirror**: Marijn Haverbeke's toolkit for building editors. Explore core concepts with interactive demos:
 
 <img src="screenshots/07-prosemirror.png" alt="Prosemirror" width="600" />
 
 | Section | What You'll Learn |
 |---------|-------------------|
-| Overview | EditorState, selection, transactions — single source of truth |
+| Overview | EditorState, selection, transactions: single source of truth |
 | Model | Schema, node types, content expressions |
 | State | doc, selection, storedMarks, plugins |
 | Transform | Steps, ReplaceStep, mapping, invert |
@@ -54,7 +54,7 @@ A companion tab with foundational concepts that power every modern editor:
 |---|-------|-------------------|
 | 1 | Rendering Approaches | Why `contentEditable` beats `<textarea>`, `<canvas>`, and fake cursors |
 | 2 | ContentEditable | How the browser's native rich text API works (and where it breaks) |
-| 3 | Selection API | Anchor, focus, direction — the browser primitives editors rely on |
+| 3 | Selection API | Anchor, focus, direction: the browser primitives editors rely on |
 | 4 | State Model | Why editors use structured JSON state instead of raw HTML |
 | 5 | Update Loop | Event → Command → Clone → Modify → Diff → Patch (just like React!) |
 | 6 | Node Structures | Map + Array (Draft.js) vs Map + Linked List (Lexical) |
@@ -90,7 +90,7 @@ This project is a **hands-on teaching tool** built for a frontend system design 
 | [TypeScript 5](https://www.typescriptlang.org/) | Type safety |
 | [Tailwind CSS 4](https://tailwindcss.com/) | Utility-first CSS (with custom CSS variables) |
 
-Zero external UI libraries. Every demo, animation, and visualization is built from scratch with plain React, CSS, and browser APIs. Fully responsive — works on desktop, tablet, and mobile.
+Zero external UI libraries. Every demo, animation, and visualization is built from scratch with plain React, CSS, and browser APIs. Fully responsive: works on desktop, tablet, and mobile.
 
 ---
 
@@ -108,7 +108,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) — you'll land on **Prosemirror** by default. Use the sidebar to switch between Prosemirror sections and Rich Text Editor demos.
+Open [http://localhost:3000](http://localhost:3000). You'll land on **Prosemirror** by default. Use the sidebar to switch between Prosemirror sections and Rich Text Editor demos.
 
 ---
 
@@ -146,11 +146,11 @@ app/
 
 These demos are informed by the internals of:
 
-- [**Prosemirror**](https://prosemirror.net/) — Marijn Haverbeke's toolkit for building editors (positions, transforms, immutable tree)
-- [**Lexical**](https://lexical.dev/) — Meta's extensible text editor framework (linked list node model, reconciliation)
-- [**Slate**](https://docs.slatejs.org/) — A customizable framework for building rich text editors (array-based children)
-- [**Draft.js**](https://draftjs.org/) — Meta's legacy rich text editor (ContentState, entity maps)
-- [**Google Docs**](https://docs.google.com/) — Canvas-based rendering approach
+- [**Prosemirror**](https://prosemirror.net/): Marijn Haverbeke's toolkit for building editors (positions, transforms, immutable tree)
+- [**Lexical**](https://lexical.dev/): Meta's extensible text editor framework (linked list node model, reconciliation)
+- [**Slate**](https://docs.slatejs.org/): A customizable framework for building rich text editors (array-based children)
+- [**Draft.js**](https://draftjs.org/): Meta's legacy rich text editor (ContentState, entity maps)
+- [**Google Docs**](https://docs.google.com/): Canvas-based rendering approach
 
 ---
 

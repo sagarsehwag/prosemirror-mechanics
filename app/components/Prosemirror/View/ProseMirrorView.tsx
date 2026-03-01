@@ -83,19 +83,19 @@ export default function ProseMirrorView() {
             <CardContent>
               <ul className='view-responsibilities-list'>
                 <li>
-                  <strong>Rendering</strong> — Converts <code>state.doc</code>{' '}
+                  <strong>Rendering:</strong> Converts <code>state.doc</code>{' '}
                   to DOM nodes. Uses a node-view system for custom rendering.
                 </li>
                 <li>
-                  <strong>Input handling</strong> — Keyboard, mouse, clipboard.
+                  <strong>Input handling:</strong> Keyboard, mouse, clipboard.
                   Maps browser events to transactions.
                 </li>
                 <li>
-                  <strong>Selection</strong> — Syncs{' '}
+                  <strong>Selection:</strong> Syncs{' '}
                   <code>state.selection</code> with the DOM selection.
                 </li>
                 <li>
-                  <strong>Props</strong> — <code>editable</code>,{' '}
+                  <strong>Props:</strong> <code>editable</code>,{' '}
                   <code>attributes</code>, event handlers. Passed when creating
                   the view.
                 </li>
@@ -139,8 +139,8 @@ export default function ProseMirrorView() {
             <p>
               <strong>Decorations</strong> are visual overlays the view renders
               on top of the document without changing its content. They&apos;re
-              provided via <code>props.decorations</code> — typically from
-              plugins — and used for search highlights, syntax highlighting,
+              provided via <code>props.decorations</code> (typically from
+              plugins) and used for search highlights, syntax highlighting,
               placeholders, and inline widgets.
             </p>
             <div className='view-deco-visual'>

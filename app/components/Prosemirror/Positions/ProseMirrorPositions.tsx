@@ -77,7 +77,7 @@ export default function ProseMirrorPositions() {
     const editor = liveEditorRef.current;
     if (editor && activeSubTab === 'selection' && !editor.hasChildNodes()) {
       editor.innerHTML =
-        '<p><strong>Prosemirror</strong> uses positions — integer offsets into a flat token sequence.</p>' +
+        '<p><strong>Prosemirror</strong> uses positions: integer offsets into a flat token sequence.</p>' +
         '<p>Select text here to see <em>anchor</em> and <em>head</em> update in real time. Cursor = anchor = head.</p>' +
         '<blockquote><p>Blockquotes, paragraphs, and other block nodes each add structure. Positions increment at boundaries.</p></blockquote>' +
         '<p>The quick brown fox jumps over the lazy dog. Try selecting across paragraphs to see how positions span blocks.</p>' +
@@ -125,7 +125,7 @@ export default function ProseMirrorPositions() {
             </CardHeader>
             <CardContent>
               <p>
-                A document position is an integer — the index in a flat{' '}
+                A document position is an integer: the index in a flat{' '}
                 <strong>token sequence</strong>. Selection, transforms, and
                 slices all use these positions. Document size ={' '}
                 <code>doc.content.size</code> (e.g. 14 for the doc below).
@@ -458,14 +458,14 @@ export default function ProseMirrorPositions() {
         </CardHeader>
         <CardContent>
               <p>
-                A range is a pair of positions. <code>to</code> is exclusive —
+                A range is a pair of positions. <code>to</code> is exclusive:
                 the content between <code>from</code> and <code>to</code>{' '}
                 includes positions from <code>from</code> up to (not including){' '}
                 <code>to</code>.
               </p>
               <div className='range-visual'>
                 <p className='range-visual-label'>
-                  <code>from=3, to=8</code> — <code>to</code> exclusive, so
+                  <code>from=3, to=8</code>: since <code>to</code> is exclusive,
                   positions 3–7
                 </p>
                 <div className='range-doc-visual'>
@@ -507,7 +507,7 @@ export default function ProseMirrorPositions() {
         </CardHeader>
         <CardContent>
               <p>
-                <code>doc.slice(from, to)</code> cuts a slice of the document —
+                <code>doc.slice(from, to)</code> cuts a slice of the document:
                 the content between two positions. Used for copy-paste and
                 drag-drop.
               </p>
@@ -566,7 +566,7 @@ export default function ProseMirrorPositions() {
           <CardContent>
             <p>
               Selections have <strong>anchor</strong> (unmoveable) and{' '}
-              <strong>head</strong> (moveable) — both are positions pointing
+              <strong>head</strong> (moveable). Both are positions pointing
               into the document.
               <code>from</code> = min(anchor, head), <code>to</code> =
               max(anchor, head).
@@ -664,7 +664,7 @@ export default function ProseMirrorPositions() {
               </div>
             </div>
             <div className='pm-live-selection'>
-              <h5>Live — select text below</h5>
+              <h5>Live: select text below</h5>
               <div className='pm-live-editor-wrapper'>
                 <div
                   ref={liveEditorRef}

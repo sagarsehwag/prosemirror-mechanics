@@ -167,10 +167,10 @@ interface ProseMirrorNode {
           <div className={getStepClass(2)}>2. New Fragment for p2 (replaceRange)</div>
           <div className={getStepClass(3)}>3. New p2 with new Fragment</div>
           <div className={getStepClass(4)}>4. New doc with new p2</div>
-          <div className={getStepClass(5, 'highlight-good')}>5. p1, p3 shared — no copy! ✅</div>
+          <div className={getStepClass(5, 'highlight-good')}>5. p1, p3 shared. No copy! ✅</div>
         </div>
         <div className="complexity-note">
-          <span className="good">O(depth)</span> — Only changed path recreated. No index shifting.
+          <span className="good">O(depth)</span>: only the changed path is recreated. No index shifting.
         </div>
       </div>
     </>
