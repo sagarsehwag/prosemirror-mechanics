@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Maximize2, Minimize2, X } from 'lucide-react';
+import { Maximize2, X, ArrowLeft } from 'lucide-react';
 
 type HeaderProps = {
   animationEnabled: boolean;
@@ -24,9 +24,21 @@ export function Header({
 
   return (
     <header className="viz-header">
-      <h3 className="viz-title">
-        Prose<span className="viz-title-accent">Mirror</span> Visualizer
-      </h3>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        {fullscreen && (
+          <button
+            className="viz-toolbar-btn"
+            onClick={onToggleFullscreen}
+            title="Exit fullscreen (Esc)"
+            aria-label="Exit fullscreen"
+          >
+            <ArrowLeft size={18} />
+          </button>
+        )}
+        <h3 className="viz-title">
+          Prose<span className="viz-title-accent">Mirror</span> Visualizer
+        </h3>
+      </div>
       <div className="viz-header-controls">
         {isLive ? (
           <span className="viz-hdr-chip viz-hdr-chip-live">
@@ -55,17 +67,15 @@ export function Header({
           />
           {animationEnabled ? 'Animate' : 'Paused'}
         </button>
-        <button
-          className="viz-hdr-chip viz-hdr-chip-fullscreen"
-          onClick={onToggleFullscreen}
-          title={fullscreen ? 'Exit fullscreen (Esc)' : 'Fullscreen'}
-        >
-          {fullscreen ? (
-            <Minimize2 size={16} strokeWidth={2} aria-hidden />
-          ) : (
+        {!fullscreen && (
+          <button
+            className="viz-hdr-chip viz-hdr-chip-fullscreen"
+            onClick={onToggleFullscreen}
+            title="Fullscreen"
+          >
             <Maximize2 size={16} strokeWidth={2} aria-hidden />
-          )}
-        </button>
+          </button>
+        )}
       </div>
     </header>
   );

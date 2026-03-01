@@ -1903,6 +1903,9 @@ kbd {
 }
 
 .update-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: var(--bg-tertiary);
     border: 2px solid var(--border-color);
     border-radius: var(--radius-md);
@@ -1934,13 +1937,18 @@ kbd {
 }
 
 .step-icon {
-    font-size: var(--font-size-2xl);
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
     margin-bottom: var(--gap-sm);
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .step-icon svg {
     color: inherit;
+    width: 18px;
+    height: 18px;
 }
 
 .step-content h4 {
