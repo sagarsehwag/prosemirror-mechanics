@@ -96,7 +96,7 @@ export default function NodeStructures() {
       padding: 8px;
       margin-top: 8px;
       font-size: 0.75rem;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: var(--font-mono);
     `;
     shiftOverlay.innerHTML = `
       <div style="color: var(--accent-red); font-weight: 600; margin-bottom: 4px;">⚠️ Array indices must shift!</div>

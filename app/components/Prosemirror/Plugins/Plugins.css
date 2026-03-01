@@ -22,7 +22,7 @@
 }
 
 .plugins-tab .prosemirror-section p code {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.85em;
   color: var(--accent-blue);
   background: var(--bg-tertiary);
@@ -63,7 +63,7 @@
 }
 
 .plugins-tab .plugins-callout code {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.85em;
   color: var(--accent-blue);
   background: var(--bg-tertiary);
@@ -145,7 +145,7 @@
 }
 
 .plugins-tab .plugins-spec-card code {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--accent-blue);
@@ -182,7 +182,7 @@
 }
 
 .plugins-tab .plugins-list-name {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-weight: 600;
   font-size: 0.9rem;
   color: var(--accent-blue);

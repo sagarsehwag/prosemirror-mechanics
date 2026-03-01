@@ -22,7 +22,7 @@
 }
 
 .transactions-tab .prosemirror-section p code {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.85em;
   color: var(--accent-blue);
   background: var(--bg-tertiary);
@@ -81,7 +81,7 @@
 }
 
 .transactions-tab .tx-hierarchy-label {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-weight: 600;
   font-size: 0.95rem;
   color: var(--accent-blue);
@@ -193,7 +193,7 @@
 }
 
 .transactions-tab .transactions-callout code {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.85em;
   color: var(--accent-blue);
   background: var(--bg-tertiary);
@@ -224,7 +224,7 @@
 }
 
 .transactions-tab .tx-struct-key {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   color: var(--accent-blue);
   min-width: 100px;
 }
@@ -261,7 +261,7 @@
 
 .transactions-tab .tx-step-card code {
   display: block;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.8rem;
   color: var(--accent-blue);
   margin-bottom: var(--gap-sm);

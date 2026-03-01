@@ -27,7 +27,7 @@
 
 .schema-tab .prosemirror-section p code,
 .schema-tab .prosemirror-section li code {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
     font-size: 0.85em;
     color: var(--accent-blue);
     background: var(--bg-tertiary);

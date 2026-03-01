@@ -169,7 +169,7 @@
 }
 
 .doc-tree {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.8rem;
 }
 
@@ -295,7 +295,7 @@
 
 /* Block vs Inline hierarchy tree */
 .block-inline-tree {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.85rem;
   padding: var(--gap-md);
   background: var(--bg-primary);

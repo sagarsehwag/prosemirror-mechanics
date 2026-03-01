@@ -765,7 +765,7 @@ button.viz-hdr-chip {
   font-size: 0.75rem;
   font-weight: 600;
   text-align: right;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
 }
 .viz-v-highlight {
   color: var(--accent-blue);
@@ -974,7 +974,7 @@ button.viz-hdr-chip {
 .viz-insp-time {
   font-size: 0.75rem;
   color: var(--text-muted);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
 }
 
 .viz-insp-flags {
@@ -1163,7 +1163,7 @@ button.viz-hdr-chip {
   line-height: 1.5;
   white-space: pre-wrap;
   color: var(--text-secondary);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   overflow: auto;
   flex: 1;
   min-height: 0;
@@ -1208,7 +1208,7 @@ button.viz-hdr-chip {
   line-height: 1.5;
   white-space: pre-wrap;
   color: #a0a0a0;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   overflow: auto;
   margin: 0;
   flex: 1;
@@ -1216,7 +1216,7 @@ button.viz-hdr-chip {
 }
 
 .viz-json-inline {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.75rem;
 }
 
@@ -1262,7 +1262,7 @@ button.viz-hdr-chip {
 .viz-diff-pre {
   margin: 0;
   padding: var(--gap-sm) var(--gap-md);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   line-height: 1.5;
   overflow: auto;
@@ -1450,11 +1450,11 @@ button.viz-hdr-chip {
 .viz-tr-card-time {
   font-size: 0.65rem;
   color: var(--text-muted);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
 }
 
 .viz-tr-card-type {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -1489,7 +1489,7 @@ button.viz-hdr-chip {
 }
 
 .viz-tr-card-meta {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.65rem;
   color: var(--text-muted);
   margin-top: auto;

@@ -60,21 +60,22 @@ export default function ProseMirrorImmutable() {
         </CardHeader>
         <CardContent>
           <p>
-            When you apply a transaction, Prosemirror creates a{' '}
-            <strong>new</strong> document, but it doesn&apos;t copy everything.
-            Unchanged nodes are <strong>reused by reference</strong>. Only the{' '}
+            When you apply a transaction, ProseMirror creates a new document.
+            It does not copy the whole tree. Unchanged nodes are{' '}
+            <strong>reused by reference</strong>. Only the{' '}
             <strong>changed node and its ancestors</strong> (up to the root) are
-            recreated, because each ancestor holds a new children array.
+            recreated, since each ancestor needs a new children array to reflect
+            the change.
           </p>
           <p>
-            This is called <strong>structural sharing</strong> (or
-            copy-on-write). Siblings of the changed node stay shared. Example:
-            doc has 3 paragraphs; you change paragraph 2. Result: new{' '}
-            <code>doc</code> object, new paragraph 2 object. Paragraphs 1 and 3
-            are the same objects as before.
+            This is called <strong>structural sharing</strong> (or copy-on-write).
+            Siblings of the changed node stay shared. For example: a doc has three
+            paragraphs and you change paragraph 2. The result is a new{' '}
+            <code>doc</code> object and a new paragraph 2 object. Paragraphs 1
+            and 3 remain the same object references as before.
           </p>
           <p>
-            That keeps updates cheap: typing in a 10,000-word doc allocates
+            This keeps updates cheap. Typing in a 10,000-word document allocates
             only a few new nodes (the changed paragraph and its ancestors), not
             the whole tree. Undo stays cheap too: old states share most nodes
             with the current state.
@@ -184,7 +185,7 @@ export default function ProseMirrorImmutable() {
         <CardContent>
           <p>
             Like the &quot;Map with Child Array&quot; demo in NodeStructures,
-            but aligned with Prosemirror&apos;s model:{' '}
+            but aligned with ProseMirror&apos;s model:{' '}
             <strong>immutable tree</strong> with <strong>Fragment</strong> for
             children. No index shifting: we create new immutable values along
             the changed path; siblings stay shared.
@@ -199,7 +200,7 @@ export default function ProseMirrorImmutable() {
         </CardHeader>
         <CardContent>
           <p>
-            Prosemirror&apos;s immutable tree with structural sharing gives
+            ProseMirror&apos;s immutable tree with structural sharing gives
             predictable complexity. New nodes are created only along the changed
             path.
           </p>

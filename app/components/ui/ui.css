@@ -27,7 +27,7 @@
   line-height: 1.5;
   white-space: pre-wrap;
   color: #a0a0a0;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   overflow: auto;
   margin: 0;
   flex: 1;
@@ -35,7 +35,7 @@
 }
 
 .ds-json-inline {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.75rem;
 }
 
@@ -79,7 +79,7 @@
 .ds-diff-pre {
   margin: 0;
   padding: var(--gap-sm) var(--gap-md);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   line-height: 1.5;
   overflow: auto;

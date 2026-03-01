@@ -42,10 +42,10 @@ function CanvasDemo() {
       styles.getPropertyValue('--bg-tertiary').trim() || '#242424';
 
     ctx.fillStyle = textColor;
-    ctx.font = '16px JetBrains Mono, monospace';
+    ctx.font = "16px 'Fira Code', monospace";
     ctx.fillText('Hello World', 20, 35);
 
-    ctx.font = 'bold 16px JetBrains Mono, monospace';
+    ctx.font = "bold 16px 'Fira Code', monospace";
     ctx.fillText('(This is rendered text)', 20, 60);
 
     let cursorVisible = true;
