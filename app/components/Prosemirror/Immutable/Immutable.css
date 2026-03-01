@@ -11,7 +11,7 @@
 }
 
 .immutable-tab .prosemirror-section p {
-  font-size: 0.9rem;
+  font-size: var(--font-size-md);
   line-height: 1.6;
   color: var(--text-secondary);
   margin-bottom: var(--gap-md);
@@ -27,7 +27,7 @@
   color: var(--accent-blue);
   background: var(--bg-tertiary);
   padding: 0.15em 0.4em;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
 }
 
 .immutable-tab .prosemirror-section p strong {
@@ -52,7 +52,7 @@
 
 .immutable-tab .doc-visual {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: var(--font-size-2sm);
 }
 
 .immutable-tab .doc-node {
@@ -79,7 +79,7 @@
 
 .immutable-tab .sharing-note {
   margin-top: var(--gap-md) !important;
-  font-size: 0.875rem;
+  font-size: var(--font-size-2sm);
   line-height: 1.5;
   color: var(--text-muted) !important;
 }
@@ -90,13 +90,13 @@
   color: var(--accent-blue);
   background: var(--bg-tertiary);
   padding: 0.15em 0.4em;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
 }
 
 .immutable-tab .structural-sharing-list {
   margin-top: var(--gap-md);
   padding-left: 1.5rem;
-  font-size: 0.9rem;
+  font-size: var(--font-size-md);
   line-height: 1.6;
   color: var(--text-secondary);
 }
@@ -124,7 +124,7 @@
 
 .immutable-tab .ss-path-tree {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: var(--font-size-2sm);
 }
 
 .immutable-tab .ss-path-row {
@@ -157,11 +157,11 @@
 
 .immutable-tab .ss-path-arrow {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: var(--font-size-md);
 }
 
 .immutable-tab .ss-path-badge {
-  font-size: 0.7rem;
+  font-size: var(--font-size-2xs);
   padding: 0.2rem 0.5rem;
   border-radius: var(--radius-sm);
   text-transform: uppercase;
@@ -180,7 +180,7 @@
 
 .immutable-tab .ss-path-legend {
   margin-top: var(--gap-md) !important;
-  font-size: 0.875rem;
+  font-size: var(--font-size-2sm);
   line-height: 1.5;
   color: var(--text-muted) !important;
 }
@@ -217,8 +217,8 @@
 }
 
 .immutable-tab .ss-state-label {
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -227,7 +227,7 @@
 
 .immutable-tab .ss-state-tree {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: var(--font-size-sm);
 }
 
 .immutable-tab .ss-state-tree .doc-children {
@@ -244,20 +244,20 @@
 }
 
 .immutable-tab .ss-connector-shared {
-  font-size: 0.7rem;
+  font-size: var(--font-size-2xs);
   color: var(--accent-green);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .immutable-tab .ss-connector-new {
-  font-size: 0.7rem;
+  font-size: var(--font-size-2xs);
   color: var(--accent-orange);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .immutable-tab .ss-side-by-side-note {
   margin-top: var(--gap-md) !important;
-  font-size: 0.875rem;
+  font-size: var(--font-size-2sm);
   line-height: 1.5;
   color: var(--text-muted) !important;
 }
@@ -278,7 +278,7 @@
 }
 
 .immutable-tab .structure-panel .panel-header h3 {
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .immutable-tab .pm-workflow-diagram {
@@ -290,7 +290,7 @@
 
 .immutable-tab .pm-workflow-tree {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: var(--font-size-2sm);
   line-height: 1.6;
 }
 
@@ -312,7 +312,7 @@
 .immutable-tab .pm-workflow-node {
   padding: 0.35rem 0.75rem;
   border-radius: var(--radius-sm);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .immutable-tab .pm-workflow-node.doc {
@@ -333,18 +333,18 @@
   background: color-mix(in srgb, var(--accent-green) 15%, transparent);
   border: 1px solid color-mix(in srgb, var(--accent-green) 30%, transparent);
   color: var(--accent-green);
-  font-size: 0.8rem;
+  font-size: var(--font-size-sm);
 }
 
 .immutable-tab .pm-workflow-arrow {
   color: var(--text-muted);
-  font-size: 0.8rem;
+  font-size: var(--font-size-sm);
 }
 
 .immutable-tab .pm-workflow-fragment,
 .immutable-tab .pm-workflow-fragment-inline {
   color: var(--accent-blue);
-  font-size: 0.8rem;
+  font-size: var(--font-size-sm);
 }
 
 .immutable-tab .pm-workflow-fragment-content {

@@ -16,9 +16,13 @@
     --gap-xl: 2rem;
 
     /* Border Radius */
+    --radius-xs: 2px;
+    --radius-2xs: 3px;
+    --radius-tag: 4px;
     --radius-sm: 6px;
     --radius-md: 10px;
     --radius-lg: 16px;
+    --radius-xl: 20px;
 
     /* Transitions */
     --transition-fast: 150ms ease;
@@ -27,11 +31,17 @@
 
     /* Typography */
     --font-mono: 'Fira Code', monospace;
+    --font-size-4xs: 0.5rem;
+    --font-size-3xs: 0.55rem;
     --font-size-xs: 0.65rem;
+    --font-size-2xs: 0.7rem;
     --font-size-sm: 0.8rem;
+    --font-size-2sm: 0.85rem;
     --font-size-md: 0.9rem;
+    --font-size-2md: 0.95rem;
     --font-size-base: 1rem;
     --font-size-lg: 1.1rem;
+    --font-size-2lg: 1.15rem;
     --font-size-xl: 1.25rem;
     --font-size-2xl: 2rem;
     --font-weight-normal: 400;
@@ -254,7 +264,7 @@ li.ProseMirror-selectednode::after {
     }
 
     .sidebar.sidebar-collapsed .nav-section-header .nav-icon {
-        font-size: 1.25rem;
+        font-size: var(--font-size-xl);
         line-height: 1;
         display: flex;
         align-items: center;
@@ -308,7 +318,7 @@ li.ProseMirror-selectednode::after {
     border-radius: 50%;
     color: var(--text-secondary);
     cursor: pointer;
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-fast);
 }
@@ -339,13 +349,13 @@ li.ProseMirror-selectednode::after {
 }
 
 .sidebar-header h1 {
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
     margin-bottom: 0.25rem;
 }
 
 .sidebar-header .subtitle {
-    font-size: 0.85rem;
+    font-size: var(--font-size-2sm);
     color: var(--text-secondary);
 }
 
@@ -380,7 +390,7 @@ li.ProseMirror-selectednode::after {
 }
 
 .nav-icon {
-    font-size: 1.25rem;
+    font-size: var(--font-size-xl);
 }
 
 .nav-icon-img,
@@ -461,21 +471,21 @@ li.ProseMirror-selectednode::after {
 }
 
 .nav-sublist .nav-item .nav-icon {
-    font-size: 1.1rem;
+    font-size: var(--font-size-lg);
 }
 
 .nav-sublist .nav-item .nav-link span:not(.nav-icon):not(.nav-badge) {
-    font-size: 0.9rem;
+    font-size: var(--font-size-md);
 }
 
 .nav-badge {
     margin-left: auto;
-    font-size: 0.6rem;
-    font-weight: 700;
+    font-size: var(--font-size-3xs);
+    font-weight: var(--font-weight-bold);
     letter-spacing: 0.05em;
     text-transform: uppercase;
     padding: 0.15rem 0.45rem;
-    border-radius: 20px;
+    border-radius: var(--radius-xl);
     background: linear-gradient(135deg, color-mix(in srgb, var(--accent-orange) 20%, transparent), color-mix(in srgb, var(--accent-orange) 8%, transparent));
     color: var(--accent-orange);
     border: 1px solid color-mix(in srgb, var(--accent-orange) 25%, transparent);
@@ -510,7 +520,7 @@ li.ProseMirror-selectednode::after {
 }
 
 .sidebar-footer .tip {
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
     color: var(--accent-yellow);
     background: color-mix(in srgb, var(--accent-yellow) 10%, transparent);
     padding: 0.75rem;
@@ -528,7 +538,7 @@ li.ProseMirror-selectednode::after {
     border-radius: var(--radius-md);
     background: var(--bg-tertiary);
     color: var(--text-secondary);
-    font-size: 0.85rem;
+    font-size: var(--font-size-2sm);
     font-family: inherit;
     cursor: pointer;
     transition: all var(--transition-fast);
@@ -612,7 +622,7 @@ li.ProseMirror-selectednode::after {
     width: 20px;
     height: 2px;
     background: currentColor;
-    border-radius: 2px;
+    border-radius: var(--radius-xs);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
     transform-origin: center;
 }
@@ -751,8 +761,8 @@ li.ProseMirror-selectednode::after {
     padding: 0.75rem 1.25rem;
     background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
     color: #fff;
-    font-weight: 600;
-    font-size: 0.95rem;
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-2md);
     border-radius: var(--radius-md);
     text-decoration: none;
     box-shadow: 0 2px 8px color-mix(in srgb, var(--accent-purple) 35%, transparent);
@@ -765,7 +775,7 @@ li.ProseMirror-selectednode::after {
 }
 
 .next-button-arrow {
-    font-size: 1.1rem;
+    font-size: var(--font-size-lg);
 }
 
 /* Desktop: right-align for navigation flow */
@@ -787,7 +797,7 @@ li.ProseMirror-selectednode::after {
 
     .next-button {
         padding: 0.875rem 1.5rem;
-        font-size: 1rem;
+        font-size: var(--font-size-base);
     }
 }
 
@@ -804,11 +814,11 @@ li.ProseMirror-selectednode::after {
         width: 100%;
         min-height: 48px;
         padding: 0.875rem 1.5rem;
-        font-size: 1rem;
+        font-size: var(--font-size-base);
     }
 
     .next-button-arrow {
-        font-size: 1.15rem;
+        font-size: var(--font-size-2lg);
     }
 }
 
@@ -904,14 +914,14 @@ li.ProseMirror-selectednode::after {
 }
 
 .demo-header h2 {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
     margin-bottom: 0.5rem;
 }
 
 .demo-subtitle {
     color: var(--text-secondary);
-    font-size: 1.1rem;
+    font-size: var(--font-size-lg);
 }
 
 /* ========================================
@@ -1000,8 +1010,8 @@ li.ProseMirror-selectednode::after {
 }
 
 .card-header h3 {
-    font-size: 1.15rem;
-    font-weight: 600;
+    font-size: var(--font-size-2lg);
+    font-weight: var(--font-weight-semibold);
 }
 
 .card-content {
@@ -1020,10 +1030,10 @@ li.ProseMirror-selectednode::after {
    ======================================== */
 
 .badge {
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
     padding: 0.25rem 0.75rem;
-    border-radius: 20px;
+    border-radius: var(--radius-xl);
     white-space: nowrap;
 }
 
@@ -1077,7 +1087,7 @@ li.ProseMirror-selectednode::after {
 .demo-contenteditable {
     width: 100%;
     padding: 0.875rem;
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     font-family: inherit;
     background: var(--bg-tertiary);
     border: 2px solid var(--border-color);
@@ -1125,7 +1135,7 @@ li.ProseMirror-selectednode::after {
 
 .instructions {
     margin-top: var(--gap-md);
-    font-size: 0.9rem;
+    font-size: var(--font-size-md);
 }
 
 .instructions p {
@@ -1140,16 +1150,16 @@ li.ProseMirror-selectednode::after {
 kbd {
     display: inline-block;
     padding: 0.2rem 0.5rem;
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
     font-family: var(--font-mono);
     background: var(--bg-primary);
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     box-shadow: 0 2px 0 var(--border-color);
 }
 
 .hint {
-    font-size: 0.85rem;
+    font-size: var(--font-size-2sm);
     color: var(--text-secondary);
     font-style: italic;
     margin-top: var(--gap-md);
@@ -1161,7 +1171,7 @@ kbd {
 
 .pros-cons {
     list-style: none;
-    font-size: 0.85rem;
+    font-size: var(--font-size-2sm);
 }
 
 .pros-cons li {
@@ -1192,7 +1202,7 @@ kbd {
 .comparison-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.95rem;
+    font-size: var(--font-size-2md);
 }
 
 .comparison-table th,
@@ -1204,19 +1214,19 @@ kbd {
 
 .comparison-table th {
     background: var(--bg-tertiary);
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
     color: var(--text-secondary);
     text-transform: uppercase;
-    font-size: 0.75rem;
+    font-size: var(--font-size-sm);
     letter-spacing: 0.05em;
 }
 
 .comparison-table code {
     background: var(--bg-primary);
     padding: 0.2rem 0.5rem;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     font-family: var(--font-mono);
-    font-size: 0.85rem;
+    font-size: var(--font-size-2sm);
 }
 
 .comparison-table .yes {
@@ -1273,7 +1283,7 @@ kbd {
 .insight .solution {
     margin-top: var(--gap-md);
     color: var(--accent-green);
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
 }
 
 /* ========================================
@@ -1299,7 +1309,7 @@ kbd {
 }
 
 .shortcut span {
-    font-size: 0.85rem;
+    font-size: var(--font-size-2sm);
     color: var(--text-secondary);
 }
 
@@ -1313,7 +1323,7 @@ kbd {
     border-radius: var(--radius-md);
     padding: 1rem;
     font-family: var(--font-mono);
-    font-size: 0.85rem;
+    font-size: var(--font-size-2sm);
     overflow-x: auto;
     white-space: pre-wrap;
     word-break: break-all;
@@ -1330,7 +1340,7 @@ kbd {
     padding: 0.75rem;
     border-radius: var(--radius-sm);
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
     margin: var(--gap-sm) 0;
 }
 
@@ -1344,8 +1354,8 @@ kbd {
     justify-content: center;
     gap: 0.5rem;
     padding: 0.75rem 1.25rem;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
     border: none;
     border-radius: var(--radius-md);
     cursor: pointer;
@@ -1500,10 +1510,10 @@ kbd {
 }
 
 .marker {
-    font-size: 0.7rem;
+    font-size: var(--font-size-2xs);
     padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    font-weight: 600;
+    border-radius: var(--radius-sm);
+    font-weight: var(--font-weight-semibold);
 }
 
 .marker.anchor {
@@ -1519,7 +1529,7 @@ kbd {
 .selected-text {
     background: color-mix(in srgb, var(--accent-blue) 30%, transparent);
     padding: 0.25rem 0.5rem;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
 }
 
 /* ========================================
@@ -1541,7 +1551,7 @@ kbd {
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
     color: var(--text-primary);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     cursor: pointer;
     transition: all var(--transition-fast);
 }
@@ -1593,7 +1603,7 @@ kbd {
 
 .approach h4 {
     margin-bottom: var(--gap-sm);
-    font-size: 0.9rem;
+    font-size: var(--font-size-md);
 }
 
 .approach pre {
@@ -1601,7 +1611,7 @@ kbd {
     color: #a0a0a0;
     padding: 0.75rem;
     border-radius: var(--radius-sm);
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
     overflow-x: auto;
     white-space: pre-wrap;
     word-break: break-word;
@@ -1610,13 +1620,13 @@ kbd {
 .approach .pro {
     color: var(--accent-green);
     margin-top: var(--gap-sm);
-    font-size: 0.85rem;
+    font-size: var(--font-size-2sm);
 }
 
 .approach .con {
     color: var(--accent-red);
     margin-top: var(--gap-sm);
-    font-size: 0.85rem;
+    font-size: var(--font-size-2sm);
 }
 
 /* ========================================
@@ -1639,7 +1649,7 @@ kbd {
     padding: 0.5rem 1rem;
     border-radius: var(--radius-md);
     font-family: var(--font-mono);
-    font-size: 0.85rem;
+    font-size: var(--font-size-2sm);
     margin-bottom: 0.5rem;
 }
 
@@ -1662,11 +1672,11 @@ kbd {
 }
 
 .format-tag {
-    font-size: 0.7rem;
+    font-size: var(--font-size-2xs);
     padding: 0.15rem 0.5rem;
     background: var(--accent-orange);
     color: #fff;
-    border-radius: 10px;
+    border-radius: var(--radius-md);
     margin-left: 0.5rem;
 }
 
@@ -1690,14 +1700,14 @@ kbd {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.85rem;
+    font-size: var(--font-size-2sm);
 }
 
 .legend-item::before {
     content: "";
     width: 12px;
     height: 12px;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
 }
 
 .legend-item.root::before {
@@ -1727,7 +1737,7 @@ kbd {
 
 ::-webkit-scrollbar-thumb {
     background: var(--scrollbar-thumb);
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -1741,7 +1751,7 @@ kbd {
 .fake-cursor-demo {
     width: 100%;
     padding: 0.875rem;
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     background: var(--bg-tertiary);
     border: 2px solid var(--border-color);
     border-radius: var(--radius-md);
@@ -1754,7 +1764,7 @@ kbd {
 .fake-cursor-demo .word {
     cursor: pointer;
     padding: 2px 0;
-    border-radius: 2px;
+    border-radius: var(--radius-xs);
     transition: background var(--transition-fast);
 }
 
@@ -1789,7 +1799,7 @@ kbd {
     padding: var(--gap-sm);
     background: color-mix(in srgb, var(--accent-orange) 10%, transparent);
     border-radius: var(--radius-sm);
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
     color: var(--accent-orange);
 }
 
@@ -1811,7 +1821,7 @@ kbd {
     align-items: center;
     gap: var(--gap-sm);
     margin-left: auto;
-    font-size: 0.85rem;
+    font-size: var(--font-size-2sm);
     color: var(--text-secondary);
 }
 
@@ -1865,19 +1875,19 @@ kbd {
 }
 
 .step-icon {
-    font-size: 2rem;
+    font-size: var(--font-size-2xl);
     margin-bottom: var(--gap-sm);
 }
 
 .step-content h4 {
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-size: var(--font-size-2md);
+    font-weight: var(--font-weight-semibold);
     margin-bottom: 0.25rem;
     color: var(--text-primary);
 }
 
 .step-content p {
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
     color: var(--text-secondary);
     margin-bottom: var(--gap-sm);
 }
@@ -1887,7 +1897,7 @@ kbd {
     border-radius: var(--radius-sm);
     padding: 0.5rem;
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: var(--font-size-sm);
 }
 
 .step-detail code {
@@ -1897,7 +1907,7 @@ kbd {
 .flow-arrow {
     display: flex;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: var(--font-size-xl);
     color: var(--text-muted);
     opacity: 0.3;
     transition: all 0.4s ease;
@@ -1933,9 +1943,9 @@ kbd {
 
 .state-box {
     padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.7rem;
-    font-weight: 600;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-2xs);
+    font-weight: var(--font-weight-semibold);
 }
 
 .state-box.original {
@@ -1962,12 +1972,12 @@ kbd {
     border-radius: var(--radius-sm);
     padding: 0.5rem;
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: var(--font-size-2xs);
 }
 
 .diff-line {
     padding: 2px 4px;
-    border-radius: 2px;
+    border-radius: var(--radius-xs);
 }
 
 .diff-line.unchanged {
@@ -1996,7 +2006,7 @@ kbd {
 
 .dom-node .highlight {
     color: var(--accent-purple);
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
 }
 
 /* Comparison */
@@ -2045,13 +2055,13 @@ kbd {
     padding: 0.5rem;
     border-radius: var(--radius-sm);
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
     margin-bottom: var(--gap-md);
 }
 
 .comparison-bad ul,
 .comparison-good ul {
-    font-size: 0.85rem;
+    font-size: var(--font-size-2sm);
     padding-left: 1.25rem;
 }
 
@@ -2091,7 +2101,7 @@ kbd {
     margin: 0;
     padding: var(--gap-md);
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
     line-height: 1.5;
 }
 
@@ -2111,8 +2121,8 @@ kbd {
 }
 
 .map-title {
-    font-weight: 600;
-    font-size: 0.85rem;
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-2sm);
     color: var(--text-secondary);
     margin-bottom: var(--gap-md);
     padding-bottom: var(--gap-sm);
@@ -2135,7 +2145,7 @@ kbd {
 
 .map-entry .key {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: var(--font-size-sm);
     color: var(--accent-purple);
     min-width: 50px;
 }
@@ -2150,7 +2160,7 @@ kbd {
     gap: 2px;
     padding: 0.25rem 0.5rem;
     border-radius: var(--radius-sm);
-    font-size: 0.7rem;
+    font-size: var(--font-size-2xs);
 }
 
 .node-box.element {
@@ -2164,14 +2174,14 @@ kbd {
 }
 
 .node-type {
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
     color: var(--text-primary);
 }
 
 .children-arr {
     font-family: var(--font-mono);
     color: var(--accent-blue);
-    font-size: 0.65rem;
+    font-size: var(--font-size-xs);
 }
 
 .text-content {
@@ -2204,8 +2214,8 @@ kbd {
     padding: 0.5rem 1rem;
     border-radius: var(--radius-md);
     font-family: var(--font-mono);
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: var(--font-size-2sm);
+    font-weight: var(--font-weight-semibold);
     text-align: center;
     transition: all var(--transition-fast);
 }
@@ -2232,26 +2242,26 @@ kbd {
 }
 
 .linked-node small {
-    font-size: 0.65rem;
-    font-weight: 400;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-normal);
     opacity: 0.8;
 }
 
 .vertical-pointer,
 .horizontal-pointer {
     color: var(--text-muted);
-    font-size: 0.75rem;
+    font-size: var(--font-size-sm);
 }
 
 .horizontal-pointer {
-    font-size: 1.2rem;
+    font-size: var(--font-size-2lg);
 }
 
 .parent-pointers {
     display: flex;
     gap: 2.5rem;
     color: var(--text-muted);
-    font-size: 0.7rem;
+    font-size: var(--font-size-2xs);
 }
 
 /* Operation Demo */
@@ -2262,7 +2272,7 @@ kbd {
 }
 
 .operation-demo h4 {
-    font-size: 0.9rem;
+    font-size: var(--font-size-md);
     margin-bottom: var(--gap-sm);
 }
 
@@ -2274,7 +2284,7 @@ kbd {
     padding: 0.5rem;
     margin-bottom: 0.25rem;
     border-radius: var(--radius-sm);
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
     color: var(--text-secondary);
     opacity: 0.5;
     transition: all var(--transition-normal);
@@ -2308,7 +2318,7 @@ kbd {
 }
 
 .complexity-note {
-    font-size: 0.85rem;
+    font-size: var(--font-size-2sm);
     margin-top: var(--gap-sm);
     padding-top: var(--gap-sm);
     border-top: 1px dashed var(--border-color);
@@ -2316,20 +2326,20 @@ kbd {
 
 .complexity-note .bad {
     color: var(--accent-red);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     font-family: var(--font-mono);
 }
 
 .complexity-note .good {
     color: var(--accent-green);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     font-family: var(--font-mono);
 }
 
 /* Button variations */
 .btn-sm {
     padding: 0.35rem 0.75rem;
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
 }
 
 .btn-green {
@@ -2439,19 +2449,19 @@ kbd {
 @media (max-width: 768px) {
     /* -- Typography -- */
     .demo-header h2 {
-        font-size: 1.35rem;
+        font-size: var(--font-size-xl);
         overflow-wrap: break-word;
         word-break: break-word;
     }
 
     .demo-subtitle {
-        font-size: 0.9rem;
+        font-size: var(--font-size-md);
         overflow-wrap: break-word;
         word-break: break-word;
     }
 
     .card-header h3 {
-        font-size: 1rem;
+        font-size: var(--font-size-base);
     }
 
     /* -- Card Padding -- */
@@ -2480,7 +2490,7 @@ kbd {
     /* -- Comparison Tables -- */
 
     .comparison-table {
-        font-size: 0.8rem;
+        font-size: var(--font-size-sm);
         min-width: 500px;
     }
 
@@ -2537,7 +2547,7 @@ kbd {
     }
 
     .approach pre {
-        font-size: 0.7rem;
+        font-size: var(--font-size-2xs);
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
@@ -2548,7 +2558,7 @@ kbd {
     }
 
     .tree-node > span {
-        font-size: 0.7rem;
+        font-size: var(--font-size-2xs);
         padding: 0.3rem 0.6rem;
     }
 
@@ -2560,7 +2570,7 @@ kbd {
         flex-wrap: wrap;
         gap: var(--gap-sm);
         justify-content: center;
-        font-size: 0.8rem;
+        font-size: var(--font-size-sm);
     }
 
     /* -- State Model: Editor + Code output -- */
@@ -2569,7 +2579,7 @@ kbd {
     }
 
     .code-output.json {
-        font-size: 0.72rem;
+        font-size: var(--font-size-2xs);
         padding: 0.75rem;
         max-height: 220px;
     }
@@ -2618,7 +2628,7 @@ kbd {
 
     .flow-arrow::before {
         content: "↓";
-        font-size: 1.25rem;
+        font-size: var(--font-size-xl);
         color: inherit;
         opacity: inherit;
     }
@@ -2630,7 +2640,7 @@ kbd {
 
     .comparison-bad code,
     .comparison-good code {
-        font-size: 0.7rem;
+        font-size: var(--font-size-2xs);
         overflow-x: auto;
         word-break: break-all;
     }
@@ -2646,7 +2656,7 @@ kbd {
     }
 
     .code-snippet pre {
-        font-size: 0.7rem;
+        font-size: var(--font-size-2xs);
     }
 
     /* NodeMap diagram - scrollable container */
@@ -2665,7 +2675,7 @@ kbd {
     }
 
     .map-entry .key {
-        font-size: 0.7rem;
+        font-size: var(--font-size-2xs);
         min-width: 38px;
         flex-shrink: 0;
     }
@@ -2675,12 +2685,12 @@ kbd {
     }
 
     .node-box {
-        font-size: 0.65rem;
+        font-size: var(--font-size-xs);
         padding: 0.2rem 0.4rem;
     }
 
     .children-arr {
-        font-size: 0.6rem;
+        font-size: var(--font-size-3xs);
         word-break: break-all;
     }
 
@@ -2698,57 +2708,57 @@ kbd {
 
     .linked-node {
         padding: 0.3rem 0.5rem;
-        font-size: 0.7rem;
+        font-size: var(--font-size-2xs);
     }
 
     .linked-node small {
-        font-size: 0.55rem;
+        font-size: var(--font-size-3xs);
     }
 
     .horizontal-pointer {
-        font-size: 0.9rem;
+        font-size: var(--font-size-md);
     }
 
     .vertical-pointer {
-        font-size: 0.65rem;
+        font-size: var(--font-size-xs);
     }
 
     .parent-pointers {
         gap: 1.5rem;
-        font-size: 0.6rem;
+        font-size: var(--font-size-3xs);
     }
 
     /* Operation demo on mobile */
     .operation-demo h4 {
-        font-size: 0.85rem;
+        font-size: var(--font-size-2sm);
     }
 
     .complexity-note {
-        font-size: 0.8rem;
+        font-size: var(--font-size-sm);
     }
 
     /* -- Code Output -- */
     .code-output {
-        font-size: 0.75rem;
+        font-size: var(--font-size-sm);
         padding: 0.75rem;
         max-height: 250px;
     }
 
     .code-small {
-        font-size: 0.7rem;
+        font-size: var(--font-size-2xs);
         padding: 0.5rem;
     }
 
     /* -- Badges -- */
     .badge {
-        font-size: 0.65rem;
+        font-size: var(--font-size-xs);
         padding: 0.2rem 0.5rem;
     }
 
     /* -- Buttons -- */
     .btn {
         padding: 0.6rem 1rem;
-        font-size: 0.85rem;
+        font-size: var(--font-size-2sm);
     }
 
     /* -- State Display (Selection Inspector) -- */
@@ -2762,11 +2772,11 @@ kbd {
     }
 
     .state-label {
-        font-size: 0.75rem;
+        font-size: var(--font-size-sm);
     }
 
     .state-value {
-        font-size: 0.8rem;
+        font-size: var(--font-size-sm);
     }
 
     /* -- Operation Demo -- */
@@ -2775,7 +2785,7 @@ kbd {
     }
 
     .op-step {
-        font-size: 0.75rem;
+        font-size: var(--font-size-sm);
     }
 
     /* -- General overflow handling -- */

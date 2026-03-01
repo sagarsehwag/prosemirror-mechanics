@@ -94,8 +94,8 @@
   height: 28px;
   padding: 0 14px;
   font-family: inherit;
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-semibold);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -152,7 +152,7 @@ button.viz-hdr-chip {
   border-color: color-mix(in srgb, var(--accent-blue) 40%, transparent);
   background: color-mix(in srgb, var(--accent-blue) 10%, var(--bg-tertiary));
   animation: viz-chip-flash 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .viz-hdr-chip-tx:hover {
@@ -185,7 +185,7 @@ button.viz-hdr-chip {
 }
 
 .viz-hdr-chip-dismiss {
-  font-size: 0.85rem;
+  font-size: var(--font-size-2sm);
   line-height: 1;
   margin-left: 2px;
   opacity: 0.5;
@@ -239,8 +239,8 @@ button.viz-hdr-chip {
 }
 
 .viz-title {
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: var(--font-size-2lg);
+  font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
   margin: 0;
 }
@@ -250,7 +250,7 @@ button.viz-hdr-chip {
 }
 
 .viz-subtitle {
-  font-size: 0.85rem;
+  font-size: var(--font-size-2sm);
   color: var(--text-secondary);
   line-height: 1.5;
   margin: 0;
@@ -306,15 +306,15 @@ button.viz-hdr-chip {
     transparent 100%
   );
   border-bottom: 1px solid var(--border-color);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: var(--font-size-2sm);
+  font-weight: var(--font-weight-semibold);
   color: var(--accent-purple);
   flex-shrink: 0;
   letter-spacing: 0.02em;
 }
 
 .viz-editor-label {
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--text-secondary);
 }
 
@@ -336,8 +336,8 @@ button.viz-hdr-chip {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: var(--font-size-2sm);
+  font-weight: var(--font-weight-bold);
   border-radius: var(--radius-sm);
   border: 1px solid var(--border-color);
   background: var(--bg-tertiary);
@@ -349,8 +349,8 @@ button.viz-hdr-chip {
 .viz-toolbar-btn.wide {
   width: auto;
   padding: 0 var(--gap-sm);
-  font-weight: 500;
-  font-size: 0.8rem;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
 }
 
 .viz-toolbar-btn:hover {
@@ -376,7 +376,7 @@ button.viz-hdr-chip {
 .viz-editor-mount {
   padding: var(--gap-md);
   outline: none;
-  font-size: 0.95rem;
+  font-size: var(--font-size-2md);
   line-height: 1.5;
   color: var(--text-primary);
   overflow-y: auto;
@@ -387,7 +387,7 @@ button.viz-hdr-chip {
   position: absolute;
   inset: 0;
   padding: var(--gap-md);
-  font-size: 0.95rem;
+  font-size: var(--font-size-2md);
   line-height: 1.5;
   color: var(--text-primary);
   background: var(--bg-card);
@@ -532,8 +532,8 @@ button.viz-hdr-chip {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-bold);
   color: var(--text-muted);
   flex-shrink: 0;
   transition: all 0.3s ease;
@@ -550,8 +550,8 @@ button.viz-hdr-chip {
 }
 
 .viz-lc-card-label {
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: var(--font-size-2sm);
+  font-weight: var(--font-weight-semibold);
   color: var(--text-secondary);
   white-space: nowrap;
   overflow: hidden;
@@ -568,7 +568,7 @@ button.viz-hdr-chip {
 
 .viz-lc-arrow {
   flex: 0 0 auto;
-  font-size: 0.85rem;
+  font-size: var(--font-size-2sm);
   color: var(--text-muted);
   opacity: 0.4;
   padding: 0 3px;
@@ -589,7 +589,7 @@ button.viz-hdr-chip {
   border-radius: var(--radius-md);
   border: 1px solid var(--border-color);
   background: var(--bg-tertiary);
-  font-size: 0.9rem;
+  font-size: var(--font-size-md);
   line-height: 1.65;
   color: var(--text-secondary);
   display: flex;
@@ -598,15 +598,15 @@ button.viz-hdr-chip {
 }
 
 .viz-lc-callout-label {
-  font-weight: 700;
-  font-size: 0.85rem;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-2sm);
   white-space: nowrap;
   flex-shrink: 0;
   letter-spacing: 0.01em;
 }
 
 .viz-lc-callout-text {
-  font-size: 0.85rem;
+  font-size: var(--font-size-2sm);
   line-height: 1.6;
   color: var(--text-muted);
 }
@@ -678,8 +678,8 @@ button.viz-hdr-chip {
     transparent 100%
   );
   border-bottom: 1px solid var(--border-color);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: var(--font-size-2sm);
+  font-weight: var(--font-weight-semibold);
   color: var(--accent-green);
   flex-shrink: 0;
   letter-spacing: 0.02em;
@@ -758,18 +758,18 @@ button.viz-hdr-chip {
 
 .viz-k {
   color: var(--text-muted);
-  font-size: 0.75rem;
+  font-size: var(--font-size-sm);
 }
 .viz-v {
   color: var(--accent-green);
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
   text-align: right;
   font-family: var(--font-mono);
 }
 .viz-v-highlight {
   color: var(--accent-blue);
-  font-size: 0.9rem;
+  font-size: var(--font-size-md);
 }
 .viz-v-trunc {
   max-width: 100px;
@@ -819,18 +819,18 @@ button.viz-hdr-chip {
   border-bottom: 1px solid var(--border-color);
 }
 .viz-inspector-title {
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: var(--font-size-2sm);
+  font-weight: var(--font-weight-semibold);
   color: var(--accent-blue);
   letter-spacing: 0.02em;
 }
 .viz-inspector-subtitle {
-  font-size: 0.75rem;
+  font-size: var(--font-size-sm);
   color: var(--text-muted);
 }
 .viz-inspector-callout {
   padding: var(--gap-md);
-  font-size: 0.82rem;
+  font-size: var(--font-size-sm);
   line-height: 1.7;
   color: var(--text-secondary);
   background: color-mix(in srgb, var(--text-primary) 2%, transparent);
@@ -841,7 +841,7 @@ button.viz-hdr-chip {
 .viz-inspector-empty {
   padding: var(--gap-md);
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: var(--font-size-md);
   line-height: 1.5;
 }
 
@@ -870,7 +870,7 @@ button.viz-hdr-chip {
   display: flex;
   gap: var(--gap-sm);
   align-items: baseline;
-  font-size: 0.8rem;
+  font-size: var(--font-size-sm);
   padding: var(--gap-sm) var(--gap-md);
   background: color-mix(in srgb, var(--text-primary) 2%, transparent);
   border-radius: var(--radius-sm);
@@ -929,9 +929,9 @@ button.viz-hdr-chip {
 .viz-type-badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  border-radius: var(--radius-xl);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
   white-space: nowrap;
 }
 
@@ -966,13 +966,13 @@ button.viz-hdr-chip {
 }
 
 .viz-insp-id {
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: var(--font-size-2sm);
+  font-weight: var(--font-weight-semibold);
   color: var(--text-secondary);
 }
 
 .viz-insp-time {
-  font-size: 0.75rem;
+  font-size: var(--font-size-sm);
   color: var(--text-muted);
   font-family: var(--font-mono);
 }
@@ -985,10 +985,10 @@ button.viz-hdr-chip {
 }
 
 .viz-insp-flag {
-  font-size: 0.6rem;
-  font-weight: 600;
+  font-size: var(--font-size-3xs);
+  font-weight: var(--font-weight-semibold);
   padding: 0.1rem 0.4rem;
-  border-radius: 3px;
+  border-radius: var(--radius-2xs);
   letter-spacing: 0.02em;
 }
 
@@ -1010,18 +1010,18 @@ button.viz-hdr-chip {
 }
 
 .viz-insp-section h4 {
-  font-size: 0.7rem;
+  font-size: var(--font-size-2xs);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: var(--gap-sm);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .viz-delta {
   margin-left: 4px;
-  font-weight: 700;
-  font-size: 0.7rem;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-2xs);
 }
 .viz-delta-up {
   color: var(--accent-green);
@@ -1031,7 +1031,7 @@ button.viz-hdr-chip {
 }
 
 .viz-insp-hint {
-  font-size: 0.6rem;
+  font-size: var(--font-size-3xs);
   color: var(--text-muted);
   font-style: italic;
 }
@@ -1060,7 +1060,7 @@ button.viz-hdr-chip {
 }
 
 .viz-what-icon {
-  font-size: 1.2rem;
+  font-size: var(--font-size-2lg);
   flex-shrink: 0;
   width: 2rem;
   height: 2rem;
@@ -1092,13 +1092,13 @@ button.viz-hdr-chip {
 }
 
 .viz-what-action {
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: var(--font-size-2sm);
+  font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
 }
 
 .viz-what-detail {
-  font-size: 0.7rem;
+  font-size: var(--font-size-2xs);
   color: var(--text-muted);
   white-space: nowrap;
   overflow: hidden;
@@ -1123,26 +1123,26 @@ button.viz-hdr-chip {
 }
 
 .viz-insp-cell .viz-k {
-  font-size: 0.65rem;
+  font-size: var(--font-size-xs);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .viz-insp-cell .viz-v {
-  font-size: 0.75rem;
+  font-size: var(--font-size-sm);
   text-align: left;
   word-break: break-all;
 }
 
 .viz-insp-steps h4,
 .viz-insp-sel-text h4 {
-  font-size: 0.7rem;
+  font-size: var(--font-size-2xs);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: var(--gap-sm);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .viz-insp-step-chips {
@@ -1159,7 +1159,7 @@ button.viz-hdr-chip {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   padding: 1rem;
-  font-size: 0.75rem;
+  font-size: var(--font-size-sm);
   line-height: 1.5;
   white-space: pre-wrap;
   color: var(--text-secondary);
@@ -1204,7 +1204,7 @@ button.viz-hdr-chip {
   border: none;
   border-radius: var(--radius-md);
   padding: 1rem;
-  font-size: 0.75rem;
+  font-size: var(--font-size-sm);
   line-height: 1.5;
   white-space: pre-wrap;
   color: #a0a0a0;
@@ -1217,7 +1217,7 @@ button.viz-hdr-chip {
 
 .viz-json-inline {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--font-size-sm);
 }
 
 /* ============================================================
@@ -1243,8 +1243,8 @@ button.viz-hdr-chip {
 }
 
 .viz-diff-label {
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-semibold);
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -1263,7 +1263,7 @@ button.viz-hdr-chip {
   margin: 0;
   padding: var(--gap-sm) var(--gap-md);
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: var(--font-size-2xs);
   line-height: 1.5;
   overflow: auto;
   flex: 1;
@@ -1348,14 +1348,14 @@ button.viz-hdr-chip {
 }
 
 .viz-tr-header-label {
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: var(--font-size-2sm);
+  font-weight: var(--font-weight-semibold);
   color: var(--accent-orange);
   letter-spacing: 0.02em;
 }
 
 .viz-tr-count {
-  font-size: 0.75rem;
+  font-size: var(--font-size-sm);
   color: var(--text-muted);
 }
 
@@ -1363,8 +1363,8 @@ button.viz-hdr-chip {
   margin-left: auto;
   flex-shrink: 0;
   padding: 0.25rem 0.6rem;
-  font-size: 0.7rem;
-  font-weight: 500;
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-medium);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   background: var(--bg-card);
@@ -1396,7 +1396,7 @@ button.viz-hdr-chip {
 
 .viz-empty-state {
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: var(--font-size-2sm);
   line-height: 1.5;
   padding: var(--gap-md) 0;
 }
@@ -1442,21 +1442,21 @@ button.viz-hdr-chip {
 }
 
 .viz-tr-card-id {
-  font-size: 0.7rem;
+  font-size: var(--font-size-2xs);
   color: var(--text-muted);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 
 .viz-tr-card-time {
-  font-size: 0.65rem;
+  font-size: var(--font-size-xs);
   color: var(--text-muted);
   font-family: var(--font-mono);
 }
 
 .viz-tr-card-type {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.02em;
 }
 
@@ -1483,14 +1483,14 @@ button.viz-hdr-chip {
 }
 
 .viz-tr-card-nosteps {
-  font-size: 0.65rem;
+  font-size: var(--font-size-xs);
   color: var(--text-muted);
   font-style: italic;
 }
 
 .viz-tr-card-meta {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: var(--font-size-xs);
   color: var(--text-muted);
   margin-top: auto;
 }
@@ -1498,9 +1498,9 @@ button.viz-hdr-chip {
 /* Step chips */
 .viz-chip {
   padding: 0.1rem 0.4rem;
-  border-radius: 3px;
-  font-size: 0.65rem;
-  font-weight: 700;
+  border-radius: var(--radius-2xs);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.03em;
 }
 
@@ -1534,11 +1534,11 @@ button.viz-hdr-chip {
 }
 .viz-root ::-webkit-scrollbar-track {
   background: var(--scrollbar-track);
-  border-radius: 3px;
+  border-radius: var(--radius-2xs);
 }
 .viz-root ::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb);
-  border-radius: 3px;
+  border-radius: var(--radius-2xs);
 }
 
 /* ============================================================
@@ -1698,7 +1698,7 @@ button.viz-hdr-chip {
   .viz-lc-card-num {
     width: 1.25rem;
     height: 1.25rem;
-    font-size: 0.6rem;
+    font-size: var(--font-size-3xs);
   }
 
   .viz-lc-callout {

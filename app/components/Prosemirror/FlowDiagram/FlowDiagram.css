@@ -25,15 +25,15 @@
 }
 
 .pm-flow-title {
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
   color: var(--text-primary);
   margin-bottom: var(--gap-sm);
   letter-spacing: -0.02em;
 }
 
 .pm-flow-subtitle {
-  font-size: 0.85rem;
+  font-size: var(--font-size-2sm);
   color: var(--text-secondary);
   line-height: 1.5;
 }
@@ -112,17 +112,17 @@
     flex: 1 1 calc(50% - var(--gap-sm));
     min-width: 0;
     padding: var(--gap-sm) var(--gap-md);
-    font-size: 0.75rem;
+    font-size: var(--font-size-sm);
   }
 
   .pm-flow-step-pill .pm-flow-step-num {
     width: 1.4rem;
     height: 1.4rem;
-    font-size: 0.7rem;
+    font-size: var(--font-size-2xs);
   }
 
   .pm-flow-step-pill .pm-flow-step-name {
-    font-size: 0.7rem;
+    font-size: var(--font-size-2xs);
   }
 
   .pm-flow-arrow {
@@ -155,12 +155,12 @@
   .pm-flow-tx-item {
     min-width: 1.75rem;
     height: 1.5rem;
-    font-size: 0.65rem;
+    font-size: var(--font-size-xs);
   }
 
   .pm-flow-plugins-note {
     padding: var(--gap-md);
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
   }
 }
 
@@ -170,11 +170,11 @@
   }
 
   .pm-flow-title {
-    font-size: 1rem;
+    font-size: var(--font-size-base);
   }
 
   .pm-flow-subtitle {
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
   }
 
   .pm-flow-data-panel {
@@ -220,7 +220,7 @@
     color-mix(in srgb, var(--accent-purple) 4%, transparent) 100%
   );
   border-bottom: 1px solid color-mix(in srgb, var(--accent-purple) 20%, transparent);
-  font-size: 0.85rem;
+  font-size: var(--font-size-2sm);
 }
 
 .pm-flow-editor-actions {
@@ -231,7 +231,7 @@
 
 .pm-flow-last-event {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: var(--font-size-2xs);
   color: var(--accent-green);
   background: color-mix(in srgb, var(--accent-green) 12%, transparent);
   padding: var(--gap-sm) var(--gap-md);
@@ -244,14 +244,14 @@
 
 .pm-flow-editor-label {
   font-family: var(--font-mono);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--accent-purple);
 }
 
 .pm-flow-editor {
   min-height: 80px;
   padding: var(--gap-md);
-  font-size: 0.95rem;
+  font-size: var(--font-size-2md);
   line-height: 1.5;
   outline: none;
 }
@@ -297,7 +297,7 @@
   left: 50%;
   transform: translateX(-50%);
   padding: var(--gap-md) var(--gap-lg);
-  font-size: 0.875rem;
+  font-size: var(--font-size-2sm);
   line-height: 1.6;
   color: var(--text-primary);
   background: var(--bg-tertiary);
@@ -368,8 +368,8 @@
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   background: var(--bg-card);
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
   color: var(--text-secondary);
   cursor: pointer;
   transition: all 0.2s ease;
@@ -391,15 +391,15 @@
   flex-shrink: 0;
   border-radius: 50%;
   background: var(--bg-tertiary);
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
 }
 
 .pm-flow-step-pill .pm-flow-step-name {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 0.78rem;
+  font-size: var(--font-size-sm);
   min-width: 0;
 }
 
@@ -445,7 +445,7 @@
 
 .pm-flow-arrow {
   flex: 0 0 auto;
-  font-size: 1.1rem;
+  font-size: var(--font-size-lg);
   color: var(--text-muted);
   opacity: 0.5;
   padding: 0 var(--gap-sm);
@@ -480,8 +480,8 @@
   padding: 0 var(--gap-md);
   background: var(--bg-tertiary);
   border-bottom: 1px solid var(--border-color);
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
   color: var(--text-secondary);
   flex-shrink: 0;
   min-width: 0;
@@ -504,7 +504,7 @@
   display: flex;
   align-items: center;
   gap: var(--gap-sm);
-  font-size: 0.75rem;
+  font-size: var(--font-size-sm);
   color: var(--text-secondary);
   cursor: pointer;
   margin-bottom: var(--gap-sm);
@@ -534,8 +534,8 @@
 .pm-flow-tx-clear {
   flex-shrink: 0;
   padding: 0.25rem 0.5rem;
-  font-size: 0.7rem;
-  font-weight: 500;
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-medium);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   background: var(--bg-card);
@@ -554,8 +554,8 @@
   min-width: 2rem;
   height: 1.75rem;
   padding: 0 0.4rem;
-  font-size: 0.7rem;
-  font-weight: 500;
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-medium);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   background: var(--bg-card);
@@ -576,12 +576,12 @@
 }
 
 .pm-flow-data-badge {
-  font-size: 0.6rem;
+  font-size: var(--font-size-3xs);
   padding: 0.15rem 0.4rem;
   background: var(--accent-green);
   color: white;
-  border-radius: 4px;
-  font-weight: 500;
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-medium);
   margin-left: auto;
   flex-shrink: 0;
 }
@@ -614,8 +614,8 @@
 
 .pm-flow-data-label {
   display: block;
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-semibold);
   color: var(--text-muted);
   margin-bottom: var(--gap-sm);
   margin-top: var(--gap-md);
@@ -650,8 +650,8 @@
 }
 
 .pm-flow-diff-col-label {
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-semibold);
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -678,7 +678,7 @@
   margin: 0;
   padding: var(--gap-sm) var(--gap-md);
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: var(--font-size-2xs);
   line-height: 1.5;
   overflow: auto;
   flex: 1;
@@ -737,7 +737,7 @@
 .pm-flow-data-json {
   margin: 0;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--font-size-sm);
   line-height: 1.5;
   color: var(--text-secondary);
   white-space: pre-wrap;
@@ -780,7 +780,7 @@
 
 .pm-flow-data-placeholder {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: var(--font-size-2sm);
   color: var(--text-muted);
   line-height: 1.5;
 }
@@ -792,12 +792,12 @@
 
 .pm-flow-data-body::-webkit-scrollbar-track {
   background: var(--bg-tertiary);
-  border-radius: 3px;
+  border-radius: var(--radius-2xs);
 }
 
 .pm-flow-data-body::-webkit-scrollbar-thumb {
   background: var(--border-color);
-  border-radius: 3px;
+  border-radius: var(--radius-2xs);
 }
 
 /* Plugins note - full width below grid */
@@ -811,7 +811,7 @@
   );
   border: 1px solid color-mix(in srgb, var(--accent-blue) 20%, transparent);
   border-radius: var(--radius-md);
-  font-size: 0.85rem;
+  font-size: var(--font-size-2sm);
   color: var(--text-secondary);
   line-height: 1.5;
 }
@@ -821,7 +821,7 @@
   align-items: center;
   gap: var(--gap-sm);
   cursor: pointer;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
   margin: 0;
   padding: 0;
@@ -860,7 +860,7 @@
 
 .pm-flow-plugins-note code {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: var(--font-size-sm);
   color: var(--accent-blue);
   background: var(--code-bg);
   padding: 0.1em 0.35em;

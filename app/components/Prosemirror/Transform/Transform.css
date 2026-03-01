@@ -11,7 +11,7 @@
 }
 
 .transactions-tab .prosemirror-section p {
-  font-size: 0.9rem;
+  font-size: var(--font-size-md);
   line-height: 1.55;
   color: var(--text-secondary);
   margin-bottom: var(--gap-md);
@@ -36,7 +36,7 @@
 }
 
 .transactions-tab .section-note {
-  font-size: 0.875rem;
+  font-size: var(--font-size-2sm);
   color: var(--text-muted);
   margin-top: var(--gap-sm);
   margin-bottom: 0;
@@ -82,8 +82,8 @@
 
 .transactions-tab .tx-hierarchy-label {
   font-family: var(--font-mono);
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-2md);
   color: var(--accent-blue);
 }
 
@@ -92,14 +92,14 @@
 }
 
 .transactions-tab .tx-hierarchy-hint {
-  font-size: 0.75rem;
+  font-size: var(--font-size-sm);
   color: var(--text-muted);
   text-align: center;
   line-height: 1.3;
 }
 
 .transactions-tab .tx-hierarchy-arrow {
-  font-size: 1.25rem;
+  font-size: var(--font-size-xl);
   color: var(--text-muted);
   flex-shrink: 0;
 }
@@ -121,7 +121,7 @@
 }
 
 .transactions-tab .update-loop-controls .speed-control {
-  font-size: 0.85rem;
+  font-size: var(--font-size-2sm);
   color: var(--text-secondary);
 }
 
@@ -154,25 +154,25 @@
 }
 
 .transactions-tab .step-icon {
-  font-size: 1.35rem;
+  font-size: var(--font-size-xl);
   margin-bottom: 0.2rem;
 }
 
 .transactions-tab .step-content h4 {
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: var(--font-size-2sm);
+  font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
   margin-bottom: 0.15rem;
 }
 
 .transactions-tab .step-content p {
-  font-size: 0.72rem;
+  font-size: var(--font-size-2xs);
   color: var(--text-secondary);
   margin-bottom: 0;
 }
 
 .transactions-tab .flow-arrow {
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   color: var(--text-muted);
 }
 
@@ -183,7 +183,7 @@
   background: color-mix(in srgb, var(--accent-blue) 8%, transparent);
   border-left: 4px solid var(--accent-blue);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: var(--font-size-md);
   line-height: 1.55;
   color: var(--text-secondary);
 }
@@ -215,7 +215,7 @@
   align-items: center;
   gap: var(--gap-sm);
   padding: var(--gap-sm) var(--gap-md);
-  font-size: 0.85rem;
+  font-size: var(--font-size-2sm);
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -239,7 +239,7 @@
 }
 
 .transactions-tab .tx-struct-desc {
-  font-size: 0.8rem;
+  font-size: var(--font-size-sm);
   color: var(--text-muted);
   margin-left: auto;
 }
@@ -262,7 +262,7 @@
 .transactions-tab .tx-step-card code {
   display: block;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: var(--font-size-sm);
   color: var(--accent-blue);
   margin-bottom: var(--gap-sm);
   word-break: break-all;
@@ -270,7 +270,7 @@
 
 .transactions-tab .tx-step-card p {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: var(--font-size-sm);
   color: var(--text-muted);
   line-height: 1.4;
 }
@@ -307,7 +307,7 @@
 
   .transactions-tab .flow-arrow::before {
     content: '↓';
-    font-size: 1.25rem;
+    font-size: var(--font-size-xl);
     color: inherit;
     opacity: inherit;
   }

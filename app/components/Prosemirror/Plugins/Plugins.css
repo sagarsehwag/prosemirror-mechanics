@@ -11,7 +11,7 @@
 }
 
 .plugins-tab .prosemirror-section p {
-  font-size: 0.9rem;
+  font-size: var(--font-size-md);
   line-height: 1.55;
   color: var(--text-secondary);
   margin-bottom: var(--gap-md);
@@ -31,7 +31,7 @@
 }
 
 .plugins-tab .plugins-intro-tagline {
-  font-size: 0.95rem;
+  font-size: var(--font-size-2md);
   color: var(--text-secondary);
   font-style: italic;
   margin-top: var(--gap-md);
@@ -53,7 +53,7 @@
   background: color-mix(in srgb, var(--accent-blue) 8%, transparent);
   border-left: 4px solid var(--accent-blue);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: var(--font-size-md);
   line-height: 1.55;
   color: var(--text-secondary);
 }
@@ -85,8 +85,8 @@
   align-items: center;
   gap: var(--gap-sm);
   cursor: pointer;
-  font-weight: 600;
-  font-size: 0.9rem;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-md);
   color: var(--text-primary);
   margin: 0;
   padding: 0;
@@ -146,15 +146,15 @@
 
 .plugins-tab .plugins-spec-card code {
   font-family: var(--font-mono);
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
   color: var(--accent-blue);
   flex-shrink: 0;
 }
 
 .plugins-tab .plugins-spec-card p {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: var(--font-size-2sm);
   color: var(--text-secondary);
   line-height: 1.45;
   flex: 1;
@@ -183,13 +183,13 @@
 
 .plugins-tab .plugins-list-name {
   font-family: var(--font-mono);
-  font-weight: 600;
-  font-size: 0.9rem;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-md);
   color: var(--accent-blue);
 }
 
 .plugins-tab .plugins-list-desc {
-  font-size: 0.85rem;
+  font-size: var(--font-size-2sm);
   color: var(--text-secondary);
   line-height: 1.45;
 }
