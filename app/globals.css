@@ -811,12 +811,12 @@ li.ProseMirror-selectednode::after {
 .next-button {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.25rem;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
     background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
     color: #fff;
     font-weight: var(--font-weight-semibold);
-    font-size: var(--font-size-2md);
+    font-size: var(--font-size-2sm);
     border-radius: var(--radius-md);
     text-decoration: none;
     box-shadow: 0 2px 8px color-mix(in srgb, var(--accent-purple) 35%, transparent);
@@ -829,7 +829,7 @@ li.ProseMirror-selectednode::after {
 }
 
 .next-button-arrow {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
 }
 
 /* Desktop: right-align for navigation flow */

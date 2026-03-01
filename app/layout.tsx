@@ -5,6 +5,11 @@ import { ThemeProvider } from "./components/ThemeProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sagarsehwag.github.io/prosemirror-mechanics"),
+  icons: {
+    icon: "/prosemirror-icon.svg",
+    shortcut: "/prosemirror-icon.svg",
+    apple: "/prosemirror-icon.svg",
+  },
   title: "Editor · ProseMirror",
   description:
     "Interactive demos for ProseMirror and rich text editors. Explore schema, state, transforms, view, positions, plugins, contentEditable, selection, and more.",
