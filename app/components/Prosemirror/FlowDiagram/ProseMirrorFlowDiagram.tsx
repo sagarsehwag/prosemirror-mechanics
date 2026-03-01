@@ -5,6 +5,7 @@ import 'prosemirror-view/style/prosemirror.css';
 import { STEPS } from './constants';
 import { useProseMirrorEditor } from './hooks/useProseMirrorEditor';
 import { useTransactionFlow } from './hooks/useTransactionFlow';
+import { Code } from '../../ui';
 import { FlowEditorPanel } from './FlowEditorPanel';
 import { FlowSteps } from './FlowSteps';
 import { TransactionList } from './TransactionList';
@@ -82,9 +83,9 @@ export default function ProseMirrorFlowDiagram() {
       <details className="pm-flow-plugins-note">
         <summary>Plugin pipeline</summary>
         <p>
-          Before <code>state.apply(tr)</code>, plugins run{' '}
-          <code>filterTransaction</code> (can reject) and{' '}
-          <code>appendTransaction</code> (can add steps). History stores inverse
+          Before <Code>state.apply(tr)</Code>, plugins run{' '}
+          <Code>filterTransaction</Code> (can reject) and{' '}
+          <Code>appendTransaction</Code> (can add steps). History stores inverse
           steps for undo.
         </p>
       </details>

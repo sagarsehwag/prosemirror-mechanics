@@ -10,6 +10,7 @@ import {
   Badge,
   Button,
   Table,
+  Code,
   type TableRow,
 } from '../../ui';
 
@@ -301,9 +302,9 @@ export default function NodeStructures() {
           <CardContent>
             <div className='code-snippet'>
               <pre>
-                <code>{`interface ElementNode {
+                <Code>{`interface ElementNode {
   children: Array<NodeKey>;
-}`}</code>
+}`}</Code>
               </pre>
             </div>
 
@@ -421,7 +422,7 @@ export default function NodeStructures() {
           <CardContent>
             <div className='code-snippet'>
               <pre>
-                <code>{`interface EditorNode {
+                <Code>{`interface EditorNode {
   parent: NodeKey | null;
   prev: NodeKey | null;
   next: NodeKey | null;
@@ -429,7 +430,7 @@ export default function NodeStructures() {
 interface ElementNode {
   firstChild: NodeKey | null;
   lastChild: NodeKey | null;
-}`}</code>
+}`}</Code>
               </pre>
             </div>
 

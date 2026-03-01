@@ -58,7 +58,7 @@
 
 .positions-tab .prosemirror-section p code,
 .positions-tab .prosemirror-section .rp-depth-explanation code {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: 0.85em;
   color: var(--accent-blue);
   background: var(--bg-tertiary);
@@ -139,7 +139,7 @@
   gap: var(--gap-sm);
   flex-wrap: wrap;
   margin: var(--gap-sm) 0;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-2sm);
 }
 
@@ -199,7 +199,7 @@
 }
 
 .schema-tree {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-2sm);
 }
 
@@ -260,7 +260,7 @@
   align-items: center;
   gap: var(--gap-md);
   flex-wrap: wrap;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-2sm);
   margin-bottom: var(--gap-md);
 }
@@ -297,7 +297,7 @@
   background: var(--bg-tertiary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
 }
 
 /* Position sequence */
@@ -336,7 +336,7 @@
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   padding: var(--gap-md);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
 }
 
 .rp-depth-explanation {
@@ -366,7 +366,7 @@
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
 }
 
 .rp-ba-gap {
@@ -383,7 +383,7 @@
 .rp-ba-pos {
   min-width: 1.4rem;
   padding: 0.15rem 0.25rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-xs);
   color: var(--text-muted);
   background: var(--bg-tertiary);
@@ -415,7 +415,7 @@
   background: var(--bg-tertiary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-2xs);
 }
 
@@ -453,7 +453,7 @@
 }
 
 .resolvedpos-tree {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-2sm);
 }
 
@@ -531,7 +531,7 @@
 }
 
 .rp-prop-value {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   color: var(--accent-green);
 }
 
@@ -578,7 +578,7 @@
 }
 
 .position-count-table td:first-child {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
 }
 
 .position-count-table code {
@@ -612,7 +612,7 @@
 }
 
 .pos-pill code {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   color: var(--accent-blue);
   font-size: var(--font-size-sm);
 }
@@ -651,7 +651,7 @@
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
 }
 
 .range-gap {
@@ -663,7 +663,7 @@
 .range-gap .range-pos {
   min-width: 1.4rem;
   padding: 0.15rem 0.25rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-xs);
   color: var(--text-muted);
   background: var(--bg-tertiary);
@@ -681,7 +681,7 @@
   background: var(--bg-tertiary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-2xs);
 }
 
@@ -736,7 +736,7 @@
   justify-content: center;
   min-width: 1.4rem;
   padding: 0.15rem 0.25rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-xs);
   color: var(--text-muted);
   background: var(--bg-tertiary);
@@ -759,7 +759,7 @@
   background: var(--bg-tertiary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-2xs);
   transition: all var(--transition-fast);
 }
@@ -817,7 +817,7 @@
 }
 
 .ss-item code {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-2sm);
   color: var(--accent-blue);
 }
@@ -867,7 +867,7 @@
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
   margin: var(--gap-sm) 0;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-2sm);
 }
 
@@ -941,13 +941,13 @@
   display: block;
   font-size: var(--font-size-2sm);
   margin: 0.25rem 0;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
 }
 
 .slice-meta {
   font-size: var(--font-size-sm);
   color: var(--text-muted);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
 }
 
 /* ProseMirror selection demo */
@@ -1007,7 +1007,7 @@
   align-items: center;
   min-width: 1.4rem;
   padding: 0.1rem 0.2rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-xs);
   color: var(--text-muted);
   background: var(--bg-tertiary);
@@ -1040,7 +1040,7 @@
   background: var(--bg-tertiary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-2xs);
 }
 
@@ -1073,7 +1073,7 @@
   font-size: var(--font-size-sm);
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius-sm);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
 }
 
 .pm-marker.anchor {
@@ -1166,7 +1166,7 @@
 }
 
 .pm-live-state .state-value {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-md);
   color: var(--text-primary);
 }

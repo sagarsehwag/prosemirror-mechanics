@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Card, CardHeader, CardContent, Table, type TableRow } from '../../ui';
+import { Card, CardHeader, CardContent, Table, Code, type TableRow } from '../../ui';
 import ProseMirrorInsertWorkflow from './ProseMirrorInsertWorkflow';
 
 const IMMUTABLE_COMPLEXITY_COLUMNS = [
@@ -71,7 +71,7 @@ export default function ProseMirrorImmutable() {
             This is called <strong>structural sharing</strong> (or copy-on-write).
             Siblings of the changed node stay shared. For example: a doc has three
             paragraphs and you change paragraph 2. The result is a new{' '}
-            <code>doc</code> object and a new paragraph 2 object. Paragraphs 1
+            <Code>doc</Code> object and a new paragraph 2 object. Paragraphs 1
             and 3 remain the same object references as before.
           </p>
           <p>
@@ -123,7 +123,7 @@ export default function ProseMirrorImmutable() {
               </div>
             </div>
             <p className='ss-path-legend'>
-              Changed &quot;Two&quot; → &quot;Two!&quot;. <code>doc</code>{' '}
+              Changed &quot;Two&quot; → &quot;Two!&quot;. <Code>doc</Code>{' '}
               (root) and paragraph 2 are new. Each holds a new children array.
               Paragraphs 1 and 3 are reused.
             </p>
@@ -139,7 +139,7 @@ export default function ProseMirrorImmutable() {
           <p>
             Both states exist in memory. Green = <strong>same object</strong> in
             both. Orange = new allocation. The new state has a new{' '}
-            <code>doc</code> (root) and new paragraph 2; paragraphs 1 and 3 are
+            <Code>doc</Code> (root) and new paragraph 2; paragraphs 1 and 3 are
             shared.
           </p>
           <div className='ss-side-by-side'>
@@ -210,7 +210,7 @@ export default function ProseMirrorImmutable() {
             wrapperClassName='comparison-table-container'
           />
           <p className='table-note'>
-            <code>depth</code> = tree depth (typically &lt; 20). Structural
+            <Code>depth</Code> = tree depth (typically &lt; 20). Structural
             sharing reuses siblings. Position-based model.
           </p>
         </CardContent>

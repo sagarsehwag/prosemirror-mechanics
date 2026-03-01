@@ -22,7 +22,7 @@ export function CodeBlock({
           style={{
             ...style,
             backgroundColor: 'var(--code-bg)',
-            fontFamily: 'inherit',
+            fontFamily: 'var(--font-mono-code)',
           }}
         >
           {tokens.map((line, i) => (

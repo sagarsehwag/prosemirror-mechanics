@@ -230,7 +230,7 @@
 }
 
 .pm-flow-last-event {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-2xs);
   color: var(--accent-green);
   background: color-mix(in srgb, var(--accent-green) 12%, transparent);
@@ -243,7 +243,7 @@
 }
 
 .pm-flow-editor-label {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-weight: var(--font-weight-semibold);
   color: var(--accent-purple);
 }
@@ -668,7 +668,7 @@
 }
 
 .pm-flow-html-inline {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: inherit;
   white-space: pre-wrap;
   word-break: break-word;
@@ -677,7 +677,7 @@
 .pm-flow-diff-pre {
   margin: 0;
   padding: var(--gap-sm) var(--gap-md);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-2xs);
   line-height: 1.5;
   overflow: auto;
@@ -736,7 +736,7 @@
 
 .pm-flow-data-json {
   margin: 0;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-sm);
   line-height: 1.5;
   color: var(--text-secondary);
@@ -859,7 +859,7 @@
 }
 
 .pm-flow-plugins-note code {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-sm);
   color: var(--accent-blue);
   background: var(--code-bg);

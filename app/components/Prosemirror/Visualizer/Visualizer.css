@@ -765,7 +765,7 @@ button.viz-hdr-chip {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   text-align: right;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
 }
 .viz-v-highlight {
   color: var(--accent-blue);
@@ -974,7 +974,7 @@ button.viz-hdr-chip {
 .viz-insp-time {
   font-size: var(--font-size-sm);
   color: var(--text-muted);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
 }
 
 .viz-insp-flags {
@@ -1163,7 +1163,7 @@ button.viz-hdr-chip {
   line-height: 1.5;
   white-space: pre-wrap;
   color: var(--text-secondary);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   overflow: auto;
   flex: 1;
   min-height: 0;
@@ -1208,7 +1208,7 @@ button.viz-hdr-chip {
   line-height: 1.5;
   white-space: pre-wrap;
   color: #a0a0a0;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   overflow: auto;
   margin: 0;
   flex: 1;
@@ -1216,7 +1216,7 @@ button.viz-hdr-chip {
 }
 
 .viz-json-inline {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-sm);
 }
 
@@ -1262,7 +1262,7 @@ button.viz-hdr-chip {
 .viz-diff-pre {
   margin: 0;
   padding: var(--gap-sm) var(--gap-md);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-2xs);
   line-height: 1.5;
   overflow: auto;
@@ -1450,11 +1450,11 @@ button.viz-hdr-chip {
 .viz-tr-card-time {
   font-size: var(--font-size-xs);
   color: var(--text-muted);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
 }
 
 .viz-tr-card-type {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.02em;
@@ -1489,7 +1489,7 @@ button.viz-hdr-chip {
 }
 
 .viz-tr-card-meta {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-xs);
   color: var(--text-muted);
   margin-top: auto;

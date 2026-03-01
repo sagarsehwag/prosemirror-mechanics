@@ -14,6 +14,7 @@ import {
   Kbd,
   Textarea,
   Table,
+  Code,
   type TableRow,
 } from '../../ui';
 
@@ -124,7 +125,7 @@ const COMPARISON_COLUMNS = [
 
 const COMPARISON_ROWS: TableRow[] = [
   {
-    approach: <code>&lt;textarea&gt;</code>,
+    approach: <Code>&lt;textarea&gt;</Code>,
     richFormatting: '❌ No',
     cursors: '✅ Native',
     implementation: 'Easy',
@@ -136,7 +137,7 @@ const COMPARISON_ROWS: TableRow[] = [
     },
   },
   {
-    approach: <code>DOM + Fake Cursor</code>,
+    approach: <Code>DOM + Fake Cursor</Code>,
     richFormatting: '✅ Yes',
     cursors: '⚙️ Custom',
     implementation: 'High',
@@ -148,7 +149,7 @@ const COMPARISON_ROWS: TableRow[] = [
     },
   },
   {
-    approach: <code>contenteditable</code>,
+    approach: <Code>contenteditable</Code>,
     richFormatting: '✅ Yes',
     cursors: '✅ Native',
     implementation: 'Moderate',
@@ -161,7 +162,7 @@ const COMPARISON_ROWS: TableRow[] = [
     },
   },
   {
-    approach: <code>&lt;canvas&gt;</code>,
+    approach: <Code>&lt;canvas&gt;</Code>,
     richFormatting: '✅ Custom',
     cursors: '⚙️ Custom',
     implementation: 'Very High',

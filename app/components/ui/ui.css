@@ -27,7 +27,7 @@
   line-height: 1.5;
   white-space: pre-wrap;
   color: #a0a0a0;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   overflow: auto;
   margin: 0;
   flex: 1;
@@ -35,9 +35,21 @@
 }
 
 .ds-json-inline {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-sm);
 }
+
+/* Inline code snippet — JetBrains Mono */
+.ds-code {
+  font-family: var(--font-mono-code);
+  background: color-mix(in srgb, var(--accent-blue) 12%, transparent);
+  padding: 0.15em 0.4em;
+  border-radius: var(--radius-tag);
+  color: var(--accent-blue);
+}
+.ds-code-xs { font-size: var(--font-size-xs); }
+.ds-code-sm { font-size: var(--font-size-sm); }
+.ds-code-md { font-size: var(--font-size-md); }
 
 /* Diff layout */
 .ds-diff-view {
@@ -79,7 +91,7 @@
 .ds-diff-pre {
   margin: 0;
   padding: var(--gap-sm) var(--gap-md);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-2xs);
   line-height: 1.5;
   overflow: auto;

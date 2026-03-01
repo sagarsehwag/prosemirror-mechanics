@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { CodeBlock, Card, CardHeader, CardContent } from '../../ui';
+import { CodeBlock, Code, Card, CardHeader, CardContent } from '../../ui';
 
 export default function ProseMirrorPlugins() {
   return (
@@ -16,7 +16,7 @@ export default function ProseMirrorPlugins() {
             <strong>Plugins</strong> extend ProseMirror with custom state,
             props, and behavior. They hook into the editor lifecycle: filter
             transactions, store state, add keybindings, and attach UI. Pass them
-            to <code>{`EditorState.create({ plugins: [...] })`}</code>.
+            to <Code>{`EditorState.create({ plugins: [...] })`}</Code>.
           </p>
           <div className='plugins-intro-tagline'>
             History, keymap, input rules, and collab are all plugins.
@@ -31,28 +31,28 @@ export default function ProseMirrorPlugins() {
         </CardHeader>
         <CardContent>
           <p>
-            A plugin is <code>new Plugin(spec)</code>. The spec defines how it
+            A plugin is <Code>new Plugin(spec)</Code>. The spec defines how it
             participates in the editor lifecycle.
           </p>
           <div className='plugins-spec-grid'>
             <div className='plugins-spec-card'>
-              <code>state</code>
+              <Code>state</Code>
               <p>
                 Init and reconcile plugin state when transactions are applied
               </p>
             </div>
             <div className='plugins-spec-card'>
-              <code>props</code>
+              <Code>props</Code>
               <p>
                 Add handlers to the view (handleDOMEvents, decorations, etc.)
               </p>
             </div>
             <div className='plugins-spec-card'>
-              <code>view</code>
+              <Code>view</Code>
               <p>Optional EditorView extension (tooltip, menu, DOM overlay)</p>
             </div>
             <div className='plugins-spec-card'>
-              <code>filterTransaction</code>
+              <Code>filterTransaction</Code>
               <p>Reject or modify transactions before they&apos;re applied</p>
             </div>
           </div>
@@ -87,21 +87,21 @@ export default function ProseMirrorPlugins() {
         <CardContent>
           <p>
             ProseMirror ships with core plugins. Import from{' '}
-            <code>prosemirror-history</code>, <code>prosemirror-keymap</code>,
+            <Code>prosemirror-history</Code>, <Code>prosemirror-keymap</Code>,
             and similar packages.
           </p>
           <div className='plugins-list'>
             <div className='plugins-list-item'>
               <span className='plugins-list-name'>history()</span>
               <span className='plugins-list-desc'>
-                Undo/redo. Stores inverse steps; <code>undo</code> and{' '}
-                <code>redo</code> commands apply them.
+                Undo/redo. Stores inverse steps; <Code>undo</Code> and{' '}
+                <Code>redo</Code> commands apply them.
               </span>
             </div>
             <div className='plugins-list-item'>
               <span className='plugins-list-name'>keymap(keyBindings)</span>
               <span className='plugins-list-desc'>
-                Binds keys to commands. <code>baseKeymap</code> adds Enter,
+                Binds keys to commands. <Code>baseKeymap</Code> adds Enter,
                 Backspace, etc.
               </span>
             </div>
@@ -131,7 +131,7 @@ export default function ProseMirrorPlugins() {
         <CardContent>
           <p>
             <strong>Commands</strong> are functions{' '}
-            <code>(state, dispatch, view) → boolean</code>. They read state,
+            <Code>(state, dispatch, view) → boolean</Code>. They read state,
             optionally dispatch a transaction, and return whether they handled
             the action. Used by keymap, menus, and toolbars.
           </p>
@@ -149,9 +149,9 @@ keymap({ "Mod-b": boldCommand });`}
             />
           </div>
           <p className='plugins-callout'>
-            <strong>Mod</strong>: Cross-platform modifier. <code>Cmd</code> on
-            Mac, <code>Ctrl</code> elsewhere. <code>undo</code> and{' '}
-            <code>redo</code> from history are commands.
+            <strong>Mod</strong>: Cross-platform modifier. <Code>Cmd</Code> on
+            Mac, <Code>Ctrl</Code> elsewhere. <Code>undo</Code> and{' '}
+            <Code>redo</Code> from history are commands.
           </p>
         </CardContent>
       </Card>

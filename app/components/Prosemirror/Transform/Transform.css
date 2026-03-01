@@ -22,7 +22,7 @@
 }
 
 .transactions-tab .prosemirror-section p code {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: 0.85em;
   color: var(--accent-blue);
   background: var(--bg-tertiary);
@@ -81,7 +81,7 @@
 }
 
 .transactions-tab .tx-hierarchy-label {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-2md);
   color: var(--accent-blue);
@@ -193,7 +193,7 @@
 }
 
 .transactions-tab .transactions-callout code {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: 0.85em;
   color: var(--accent-blue);
   background: var(--bg-tertiary);
@@ -224,7 +224,7 @@
 }
 
 .transactions-tab .tx-struct-key {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   color: var(--accent-blue);
   min-width: 100px;
 }
@@ -261,7 +261,7 @@
 
 .transactions-tab .tx-step-card code {
   display: block;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-sm);
   color: var(--accent-blue);
   margin-bottom: var(--gap-sm);

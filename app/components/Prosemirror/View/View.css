@@ -22,7 +22,7 @@
 }
 
 .view-tab .prosemirror-section p code {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: 0.85em;
   color: var(--accent-blue);
   background: var(--bg-tertiary);
@@ -68,7 +68,7 @@
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-2sm);
   color: var(--text-primary);
 }
@@ -99,7 +99,7 @@
 }
 
 .view-tab .view-responsibilities-list code {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: 0.85em;
   color: var(--accent-blue);
 }
@@ -154,7 +154,7 @@
   background: var(--bg-tertiary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-md);
 }
 
@@ -190,7 +190,7 @@
 
 .view-tab .view-deco-type code {
   display: block;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-sm);
   color: var(--accent-blue);
   margin-bottom: 0.25rem;

@@ -2,7 +2,7 @@
    Rich Text Editor Demo - Styles
    ======================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
     /* Spacing (shared across themes) */
@@ -30,7 +30,9 @@
     --transition-slow: 400ms ease;
 
     /* Typography */
+    --font-sans: 'Inter', system-ui, sans-serif;
     --font-mono: 'Fira Code', monospace;
+    --font-mono-code: 'JetBrains Mono', monospace;
     --font-size-4xs: 0.5rem;
     --font-size-3xs: 0.55rem;
     --font-size-xs: 0.65rem;
@@ -143,8 +145,13 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Code elements use JetBrains Mono */
+code {
+  font-family: var(--font-mono-code);
+}
+
 body {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     background: var(--bg-primary);
     color: var(--text-primary);
     min-height: 100vh;
@@ -1151,7 +1158,7 @@ kbd {
     display: inline-block;
     padding: 0.2rem 0.5rem;
     font-size: var(--font-size-sm);
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-code);
     background: var(--bg-primary);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
@@ -1225,7 +1232,7 @@ kbd {
     background: var(--bg-primary);
     padding: 0.2rem 0.5rem;
     border-radius: var(--radius-sm);
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-code);
     font-size: var(--font-size-2sm);
 }
 
@@ -1322,7 +1329,7 @@ kbd {
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     padding: 1rem;
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-code);
     font-size: var(--font-size-2sm);
     overflow-x: auto;
     white-space: pre-wrap;
@@ -1339,7 +1346,7 @@ kbd {
     background: var(--bg-primary);
     padding: 0.75rem;
     border-radius: var(--radius-sm);
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-code);
     font-size: var(--font-size-sm);
     margin: var(--gap-sm) 0;
 }
@@ -1432,7 +1439,7 @@ kbd {
     background: var(--bg-primary);
     border-radius: var(--radius-md);
     padding: var(--gap-md);
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-code);
 }
 
 .state-row {
@@ -1648,7 +1655,7 @@ kbd {
 .tree-node>span {
     padding: 0.5rem 1rem;
     border-radius: var(--radius-md);
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-code);
     font-size: var(--font-size-2sm);
     margin-bottom: 0.5rem;
 }
@@ -1896,7 +1903,7 @@ kbd {
     background: var(--bg-primary);
     border-radius: var(--radius-sm);
     padding: 0.5rem;
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-code);
     font-size: var(--font-size-sm);
 }
 
@@ -1971,7 +1978,7 @@ kbd {
     background: var(--bg-primary);
     border-radius: var(--radius-sm);
     padding: 0.5rem;
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-code);
     font-size: var(--font-size-2xs);
 }
 
@@ -2054,7 +2061,7 @@ kbd {
     background: var(--bg-primary);
     padding: 0.5rem;
     border-radius: var(--radius-sm);
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-code);
     font-size: var(--font-size-sm);
     margin-bottom: var(--gap-md);
 }
@@ -2100,7 +2107,7 @@ kbd {
 .code-snippet pre {
     margin: 0;
     padding: var(--gap-md);
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-code);
     font-size: var(--font-size-sm);
     line-height: 1.5;
 }
@@ -2144,7 +2151,7 @@ kbd {
 }
 
 .map-entry .key {
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-code);
     font-size: var(--font-size-sm);
     color: var(--accent-purple);
     min-width: 50px;
@@ -2179,13 +2186,13 @@ kbd {
 }
 
 .children-arr {
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-code);
     color: var(--accent-blue);
     font-size: var(--font-size-xs);
 }
 
 .text-content {
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-code);
     color: var(--accent-green);
 }
 
@@ -2213,7 +2220,7 @@ kbd {
 .linked-node {
     padding: 0.5rem 1rem;
     border-radius: var(--radius-md);
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-code);
     font-size: var(--font-size-2sm);
     font-weight: var(--font-weight-semibold);
     text-align: center;
@@ -2327,13 +2334,13 @@ kbd {
 .complexity-note .bad {
     color: var(--accent-red);
     font-weight: var(--font-weight-bold);
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-code);
 }
 
 .complexity-note .good {
     color: var(--accent-green);
     font-weight: var(--font-weight-bold);
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-code);
 }
 
 /* Button variations */

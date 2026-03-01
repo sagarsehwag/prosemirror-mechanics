@@ -10,6 +10,7 @@ import {
   Toolbar,
   ToolbarButton,
   Badge,
+  Code,
 } from '../../ui';
 
 interface TextNode {
@@ -267,22 +268,22 @@ export default function StateModel() {
               <div className='approach'>
                 <h4>❌ Nested Tags (Complex)</h4>
                 <pre>
-                  <code>
+                  <Code>
                     {`<strong>Tarzan <u>and</u></strong><u> Jane</u>`}
-                  </code>
+                  </Code>
                 </pre>
                 <p className='con'>Hard to edit - need to manage nesting!</p>
               </div>
               <div className='approach preferred'>
                 <h4>✅ Flat Text Nodes (Lexical&apos;s Approach)</h4>
                 <pre>
-                  <code>
+                  <Code>
                     {`[
   { text: "Tarzan ", format: ["bold"] },
   { text: "and", format: ["bold", "underline"] },
   { text: " Jane", format: ["underline"] }
 ]`}
-                  </code>
+                  </Code>
                 </pre>
                 <p className='pro'>Easy to edit - just update format arrays!</p>
               </div>

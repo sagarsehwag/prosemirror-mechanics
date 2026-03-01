@@ -12,6 +12,7 @@ import {
   Button,
   SectionHeader,
   Grid,
+  Code,
 } from '../../ui';
 
 function escapeHTML(html: string): string {
@@ -127,9 +128,9 @@ export default function ContentEditableDemo() {
             <div className='text-node-demo'>
               <p>How many DOM nodes in this HTML?</p>
               <pre className='code-small'>
-                <code>
+                <Code>
                   &lt;p&gt;Hello &lt;strong&gt;World&lt;/strong&gt;&lt;/p&gt;
-                </code>
+                </Code>
               </pre>
               <Button onClick={() => setShowAnswer(!showAnswer)}>
                 {showAnswer ? 'Hide Answer' : 'Reveal Answer'}
@@ -140,16 +141,16 @@ export default function ContentEditableDemo() {
                 </p>
                 <ol className='node-list'>
                   <li>
-                    <code>HTMLParagraphElement</code> (&lt;p&gt;)
+                    <Code>HTMLParagraphElement</Code> (&lt;p&gt;)
                   </li>
                   <li>
-                    <code>Text</code> node: &quot;Hello &quot;
+                    <Code>Text</Code> node: &quot;Hello &quot;
                   </li>
                   <li>
-                    <code>HTMLStrongElement</code> (&lt;strong&gt;)
+                    <Code>HTMLStrongElement</Code> (&lt;strong&gt;)
                   </li>
                   <li>
-                    <code>Text</code> node: &quot;World&quot;
+                    <Code>Text</Code> node: &quot;World&quot;
                   </li>
                 </ol>
                 <Hint>

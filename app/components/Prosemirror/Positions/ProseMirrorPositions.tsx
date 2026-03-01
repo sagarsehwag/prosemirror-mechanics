@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { Card, CardHeader, CardContent, Button } from '../../ui';
+import { Card, CardHeader, CardContent, Button, Code } from '../../ui';
 import { POSITION_TOOLTIPS, getProseMirrorPosition } from '../utils';
 
 const POSITION_TOKENS = [
@@ -128,23 +128,23 @@ export default function ProseMirrorPositions() {
                 A document position is an integer: the index in a flat{' '}
                 <strong>token sequence</strong>. Selection, transforms, and
                 slices all use these positions. Document size ={' '}
-                <code>doc.content.size</code> (e.g. 14 for the doc below).
+                <Code>doc.content.size</Code> (e.g. 14 for the doc below).
               </p>
               <div className='content-expr-grid position-rules-grid'>
                 <div className='content-expr-item'>
-                  <code>+1</code>
+                  <Code>+1</Code>
                   <span>Per character in text nodes</span>
                 </div>
                 <div className='content-expr-item'>
-                  <code>+1</code>
+                  <Code>+1</Code>
                   <span>Entering a non-leaf node</span>
                 </div>
                 <div className='content-expr-item'>
-                  <code>+1</code>
+                  <Code>+1</Code>
                   <span>Leaving a non-leaf node</span>
                 </div>
                 <div className='content-expr-item'>
-                  <code>+1</code>
+                  <Code>+1</Code>
                   <span>Leaf node (img, br, hr) = 1 token</span>
                 </div>
               </div>
@@ -202,14 +202,14 @@ export default function ProseMirrorPositions() {
                   <tbody>
                     <tr>
                       <td>
-                        <code>0</code>
+                        <Code>0</Code>
                       </td>
                       <td>&lt;p&gt;</td>
                       <td>Start of document, right before first content</td>
                     </tr>
                     <tr>
                       <td>
-                        <code>1</code>
+                        <Code>1</Code>
                       </td>
                       <td>O</td>
                       <td>
@@ -219,42 +219,42 @@ export default function ProseMirrorPositions() {
                     </tr>
                     <tr>
                       <td>
-                        <code>2</code>
+                        <Code>2</Code>
                       </td>
                       <td>n</td>
                       <td>After &quot;O&quot;</td>
                     </tr>
                     <tr>
                       <td>
-                        <code>3</code>
+                        <Code>3</Code>
                       </td>
                       <td>e</td>
                       <td>After &quot;n&quot;</td>
                     </tr>
                     <tr>
                       <td>
-                        <code>4</code>
+                        <Code>4</Code>
                       </td>
                       <td>&lt;/p&gt;</td>
                       <td>After &quot;e&quot;. Leave paragraph</td>
                     </tr>
                     <tr>
                       <td>
-                        <code>5</code>
+                        <Code>5</Code>
                       </td>
                       <td>&lt;bq&gt;</td>
                       <td>After &lt;/p&gt;. Enter blockquote</td>
                     </tr>
                     <tr>
                       <td>
-                        <code>6</code>
+                        <Code>6</Code>
                       </td>
                       <td>&lt;p&gt;</td>
                       <td>After &lt;blockquote&gt;. Enter paragraph</td>
                     </tr>
                     <tr>
                       <td>
-                        <code>7</code>
+                        <Code>7</Code>
                       </td>
                       <td>T</td>
                       <td>
@@ -263,42 +263,42 @@ export default function ProseMirrorPositions() {
                     </tr>
                     <tr>
                       <td>
-                        <code>8</code>
+                        <Code>8</Code>
                       </td>
                       <td>w</td>
                       <td>After &quot;T&quot;</td>
                     </tr>
                     <tr>
                       <td>
-                        <code>9</code>
+                        <Code>9</Code>
                       </td>
                       <td>o</td>
                       <td>After &quot;w&quot;</td>
                     </tr>
                     <tr>
                       <td>
-                        <code>10</code>
+                        <Code>10</Code>
                       </td>
                       <td>[img]</td>
                       <td>After &quot;o&quot;. Leaf node = 1 token</td>
                     </tr>
                     <tr>
                       <td>
-                        <code>11</code>
+                        <Code>11</Code>
                       </td>
                       <td>&lt;/p&gt;</td>
                       <td>After [img]. Leave paragraph</td>
                     </tr>
                     <tr>
                       <td>
-                        <code>12</code>
+                        <Code>12</Code>
                       </td>
                       <td>&lt;/bq&gt;</td>
                       <td>After &lt;/p&gt;. Leave blockquote</td>
                     </tr>
                     <tr>
                       <td>
-                        <code>13</code>
+                        <Code>13</Code>
                       </td>
                       <td>—</td>
                       <td>End of document (after &lt;/blockquote&gt;)</td>
@@ -319,9 +319,9 @@ export default function ProseMirrorPositions() {
         </CardHeader>
         <CardContent>
               <p>
-                <code>doc.resolve(pos)</code> returns a <code>ResolvedPos</code>{' '}
+                <Code>doc.resolve(pos)</Code> returns a <Code>ResolvedPos</Code>{' '}
                 with context: parent node, offset into parent, ancestors,{' '}
-                <code>before()</code> / <code>after()</code>.
+                <Code>before()</Code> / <Code>after()</Code>.
               </p>
               <p className='rp-depth-explanation'>
                 <strong>depth</strong> = number of levels the parent node is
@@ -426,7 +426,7 @@ export default function ProseMirrorPositions() {
                 </div>
                 <div className='resolvedpos-props'>
                   <p className='resolvedpos-code'>
-                    <code>doc.resolve(6)</code>
+                    <Code>doc.resolve(6)</Code>
                   </p>
                   <div className='rp-prop'>
                     <span className='rp-prop-name'>parent</span>
@@ -458,14 +458,14 @@ export default function ProseMirrorPositions() {
         </CardHeader>
         <CardContent>
               <p>
-                A range is a pair of positions. <code>to</code> is exclusive:
-                the content between <code>from</code> and <code>to</code>{' '}
-                includes positions from <code>from</code> up to (not including){' '}
-                <code>to</code>.
+                A range is a pair of positions. <Code>to</Code> is exclusive:
+                the content between <Code>from</Code> and <Code>to</Code>{' '}
+                includes positions from <Code>from</Code> up to (not including){' '}
+                <Code>to</Code>.
               </p>
               <div className='range-visual'>
                 <p className='range-visual-label'>
-                  <code>from=3, to=8</code>: since <code>to</code> is exclusive,
+                  <Code>from=3, to=8</Code>: since <Code>to</Code> is exclusive,
                   positions 3–7
                 </p>
                 <div className='range-doc-visual'>
@@ -494,8 +494,8 @@ export default function ProseMirrorPositions() {
                   })}
                 </div>
                 <p className='range-result'>
-                  Content: <code>e</code> <code>&lt;/p&gt;</code>{' '}
-                  <code>&lt;p&gt;</code> <code>T</code> <code>w</code>
+                  Content: <Code>e</Code> <Code>&lt;/p&gt;</Code>{' '}
+                  <Code>&lt;p&gt;</Code> <Code>T</Code> <Code>w</Code>
                 </p>
               </div>
         </CardContent>
@@ -507,7 +507,7 @@ export default function ProseMirrorPositions() {
         </CardHeader>
         <CardContent>
               <p>
-                <code>doc.slice(from, to)</code> cuts a slice of the document:
+                <Code>doc.slice(from, to)</Code> cuts a slice of the document:
                 the content between two positions. Used for copy-paste and
                 drag-drop.
               </p>
@@ -524,10 +524,10 @@ export default function ProseMirrorPositions() {
                     <span className='slice-block'>Two</span>
                   </div>
                   <p className='slice-range'>
-                    <code>slice(0, 5)</code>
+                    <Code>slice(0, 5)</Code>
                   </p>
                   <div className='slice-result closed'>
-                    <code>&lt;p&gt;One&lt;/p&gt;</code>
+                    <Code>&lt;p&gt;One&lt;/p&gt;</Code>
                     <span className='slice-meta'>openStart: 0, openEnd: 0</span>
                   </div>
                 </div>
@@ -545,10 +545,10 @@ export default function ProseMirrorPositions() {
                     </span>
                   </div>
                   <p className='slice-range'>
-                    <code>slice(1, 8)</code>
+                    <Code>slice(1, 8)</Code>
                   </p>
                   <div className='slice-result open'>
-                    <code>…ne&lt;/p&gt;&lt;p&gt;Tw…</code>
+                    <Code>…ne&lt;/p&gt;&lt;p&gt;Tw…</Code>
                     <span className='slice-meta'>openStart: 1, openEnd: 1</span>
                   </div>
                 </div>
@@ -568,7 +568,7 @@ export default function ProseMirrorPositions() {
               Selections have <strong>anchor</strong> (unmoveable) and{' '}
               <strong>head</strong> (moveable). Both are positions pointing
               into the document.
-              <code>from</code> = min(anchor, head), <code>to</code> =
+              <Code>from</Code> = min(anchor, head), <Code>to</Code> =
               max(anchor, head).
             </p>
             <div className='selection-demo-controls'>

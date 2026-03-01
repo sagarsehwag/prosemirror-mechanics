@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useCallback, useRef, useState } from 'react';
-import { CodeBlock, Card, CardHeader, CardContent, Button } from '../../ui';
+import { CodeBlock, Code, Card, CardHeader, CardContent, Button } from '../../ui';
 
 export default function ProseMirrorTransactions() {
   const [txStepState, setTxStepState] = useState<{
@@ -214,33 +214,33 @@ export default function ProseMirrorTransactions() {
         <CardContent>
           <p>
             Steps describe low-level document changes. The most common is{' '}
-            <code>ReplaceStep</code>, which can insert, delete, or replace
-            content. Higher-level APIs like <code>tr.insertText</code>
-            and <code>tr.delete</code> create steps for you.
+            <Code>ReplaceStep</Code>, which can insert, delete, or replace
+            content. Higher-level APIs like <Code>tr.insertText</Code>
+            and <Code>tr.delete</Code> create steps for you.
           </p>
           <div className='tx-steps-grid'>
             <div className='tx-step-card'>
-              <code>tr.insertText(text, pos)</code>
+              <Code>tr.insertText(text, pos)</Code>
               <p>Insert text at position</p>
             </div>
             <div className='tx-step-card'>
-              <code>tr.delete(from, to)</code>
+              <Code>tr.delete(from, to)</Code>
               <p>Delete range</p>
             </div>
             <div className='tx-step-card'>
-              <code>tr.replaceWith(from, to, node)</code>
+              <Code>tr.replaceWith(from, to, node)</Code>
               <p>Replace range with node(s)</p>
             </div>
             <div className='tx-step-card'>
-              <code>tr.setSelection(sel)</code>
+              <Code>tr.setSelection(sel)</Code>
               <p>Update selection (no doc change)</p>
             </div>
             <div className='tx-step-card'>
-              <code>tr.addMark(from, to, mark)</code>
+              <Code>tr.addMark(from, to, mark)</Code>
               <p>Add mark to range</p>
             </div>
             <div className='tx-step-card'>
-              <code>tr.removeMark(from, to, mark)</code>
+              <Code>tr.removeMark(from, to, mark)</Code>
               <p>Remove mark from range</p>
             </div>
           </div>
@@ -253,8 +253,8 @@ export default function ProseMirrorTransactions() {
         </CardHeader>
         <CardContent>
           <p>
-            Use <code>state.tr</code> (short for{' '}
-            <code>Transaction.create(state)</code>) to create a transaction.
+            Use <Code>state.tr</Code> (short for{' '}
+            <Code>Transaction.create(state)</Code>) to create a transaction.
             Chain methods to add steps and update selection.
           </p>
           <div className='code-snippet'>
@@ -269,9 +269,9 @@ const newState = state.apply(tr);`}
           </div>
           <p className='transactions-callout'>
             <strong>Chaining:</strong> Each method returns the same transaction
-            (mutated in place), so you can chain <code>insertText</code>,{' '}
-            <code>delete</code>, <code>setSelection</code>,{' '}
-            <code>setStoredMarks</code>, and more.
+            (mutated in place), so you can chain <Code>insertText</Code>,{' '}
+            <Code>delete</Code>, <Code>setSelection</Code>,{' '}
+            <Code>setStoredMarks</Code>, and more.
           </p>
         </CardContent>
       </Card>
@@ -283,8 +283,8 @@ const newState = state.apply(tr);`}
         <CardContent>
           <p>
             A transaction carries steps (document changes) plus metadata.
-            Plugins read and extend it via <code>tr.getMeta()</code> and{' '}
-            <code>tr.setMeta()</code>.
+            Plugins read and extend it via <Code>tr.getMeta()</Code> and{' '}
+            <Code>tr.setMeta()</Code>.
           </p>
           <div className='transactions-structure'>
             <div className='tx-struct-row'>
@@ -337,8 +337,8 @@ const newState = state.apply(tr);`}
         </CardHeader>
         <CardContent>
           <p>
-            <code>state.apply(tr)</code> returns a new EditorState. The
-            view&apos;s <code>dispatchTransaction</code> callback receives every
+            <Code>state.apply(tr)</Code> returns a new EditorState. The
+            view&apos;s <Code>dispatchTransaction</Code> callback receives every
             transaction; you apply it and pass the new state back.
           </p>
           <div className='code-snippet'>

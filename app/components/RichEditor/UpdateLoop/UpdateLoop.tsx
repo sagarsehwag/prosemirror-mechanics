@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardContent,
   Button,
+  Code,
 } from '../../ui';
 
 interface StepState {
@@ -163,7 +164,7 @@ export default function UpdateLoop() {
                 <h4>1. Intercept Event</h4>
                 <p>User presses a key</p>
                 <div className='step-detail'>
-                  <code>keydown: &apos;a&apos;</code>
+                  <Code>keydown: &apos;a&apos;</Code>
                 </div>
               </div>
             </div>
@@ -179,7 +180,7 @@ export default function UpdateLoop() {
                 <h4>2. Convert to Command</h4>
                 <p>Map event to operation</p>
                 <div className='step-detail'>
-                  <code>INSERT_TEXT(&apos;a&apos;)</code>
+                  <Code>INSERT_TEXT(&apos;a&apos;)</Code>
                 </div>
               </div>
             </div>
@@ -213,7 +214,7 @@ export default function UpdateLoop() {
                 <h4>4. Modify Clone</h4>
                 <p>Apply command to pending state</p>
                 <div className='step-detail'>
-                  <code>&quot;Hello&quot; → &quot;Helloa&quot;</code>
+                  <Code>&quot;Hello&quot; → &quot;Helloa&quot;</Code>
                 </div>
               </div>
             </div>
@@ -264,7 +265,7 @@ export default function UpdateLoop() {
             <div className='comparison-grid'>
               <div className='comparison-bad'>
                 <h4>❌ Naive Approach</h4>
-                <code>container.innerHTML = newHTML</code>
+                <Code>container.innerHTML = newHTML</Code>
                 <ul>
                   <li>Destroys all nodes</li>
                   <li>Loses selection/focus</li>
@@ -273,7 +274,7 @@ export default function UpdateLoop() {
               </div>
               <div className='comparison-good'>
                 <h4>✅ Reconciliation</h4>
-                <code>node.textContent = &quot;Helloa&quot;</code>
+                <Code>node.textContent = &quot;Helloa&quot;</Code>
                 <ul>
                   <li>Minimal DOM changes</li>
                   <li>Preserves selection</li>

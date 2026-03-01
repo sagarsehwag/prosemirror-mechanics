@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { CodeBlock, Card, CardHeader, CardContent } from '../../ui';
+import { CodeBlock, Code, Card, CardHeader, CardContent } from '../../ui';
 
 export default function ProseMirrorState() {
   return (
@@ -91,9 +91,9 @@ const newState = state.apply(tr);
           </div>
           <p className='state-callout'>
             <strong>state.tr</strong> is a shortcut for{' '}
-            <code>Transaction.create(state)</code>. Returns a transaction you
-            can chain steps on (<code>tr.insertText()</code>,{' '}
-            <code>tr.delete()</code>, etc.).
+            <Code>Transaction.create(state)</Code>. Returns a transaction you
+            can chain steps on (<Code>tr.insertText()</Code>,{' '}
+            <Code>tr.delete()</Code>, etc.).
           </p>
         </CardContent>
       </Card>
@@ -104,7 +104,7 @@ const newState = state.apply(tr);
         </CardHeader>
         <CardContent>
           <p>
-            To bootstrap an editor, use <code>EditorState.create()</code>. You
+            To bootstrap an editor, use <Code>EditorState.create()</Code>. You
             need a schema and (optionally) an initial document. Plugins and
             custom selection can be passed too.
           </p>
@@ -118,8 +118,8 @@ const newState = state.apply(tr);
             />
           </div>
           <p className='section-note'>
-            <code>doc</code> defaults to an empty paragraph if omitted.{' '}
-            <code>plugins</code> add history, keybindings, and more. See the
+            <Code>doc</Code> defaults to an empty paragraph if omitted.{' '}
+            <Code>plugins</Code> add history, keybindings, and more. See the
             Plugins tab for details.
           </p>
         </CardContent>
@@ -131,8 +131,8 @@ const newState = state.apply(tr);
         </CardHeader>
         <CardContent>
           <p>
-            Every EditorState has these core fields. <code>doc</code> and{' '}
-            <code>selection</code> are the ones you use most; plugins extend
+            Every EditorState has these core fields. <Code>doc</Code> and{' '}
+            <Code>selection</Code> are the ones you use most; plugins extend
             with their own state.
           </p>
           <div className='state-structure-merged'>
@@ -182,12 +182,12 @@ const newState = state.apply(tr);
 
             <h5>doc and selection together</h5>
             <p>
-              <code>doc</code> holds the content; <code>selection</code> (from,
+              <Code>doc</Code> holds the content; <Code>selection</Code> (from,
               to) selects a range. Together they describe what the user sees.
             </p>
             <div className='state-doc-selection-visual'>
               <p className='state-ds-label'>
-                <code>from=1, to=6</code>
+                <Code>from=1, to=6</Code>
               </p>
               <div className='state-doc-visual'>
                 {[
@@ -232,9 +232,9 @@ const newState = state.apply(tr);
         <CardContent>
           <p>
             Each plugin can store its own state. Access it via{' '}
-            <code>state.pluginState(plugin)</code> or{' '}
-            <code>plugin.getState(state)</code>. When a transaction is applied,
-            plugins reconcile their state via <code>plugin.spec.state</code>.
+            <Code>state.pluginState(plugin)</Code> or{' '}
+            <Code>plugin.getState(state)</Code>. When a transaction is applied,
+            plugins reconcile their state via <Code>plugin.spec.state</Code>.
           </p>
           <div className='code-snippet'>
             <CodeBlock
@@ -244,7 +244,7 @@ const newState = state.apply(tr);
           </div>
           <p className='section-note'>
             Plugin state is immutable too. Plugins return new state from their{' '}
-            <code>apply</code> function.
+            <Code>apply</Code> function.
           </p>
         </CardContent>
       </Card>
@@ -256,9 +256,9 @@ const newState = state.apply(tr);
         <CardContent>
           <p>
             When the cursor is inside formatted text (e.g. bold),{' '}
-            <code>storedMarks</code> holds those marks. The next character you
+            <Code>storedMarks</Code> holds those marks. The next character you
             type gets them applied automatically. When the cursor is in plain
-            text, <code>storedMarks</code> is <code>null</code>.
+            text, <Code>storedMarks</Code> is <Code>null</Code>.
           </p>
           <div className='state-storedmarks-visual'>
             <div className='state-sm-panel before'>
@@ -267,7 +267,7 @@ const newState = state.apply(tr);
                 Cursor inside bold: Hello <strong>w|</strong>orld
               </p>
               <div className='state-sm-code'>
-                <code>storedMarks: [strong]</code>
+                <Code>storedMarks: [strong]</Code>
               </div>
               <p className='state-sm-hint'>Next typed char will be bold.</p>
             </div>
@@ -277,7 +277,7 @@ const newState = state.apply(tr);
                 Result: Hello <strong>wx|</strong>orld
               </p>
               <div className='state-sm-code'>
-                <code>storedMarks: [strong]</code>
+                <Code>storedMarks: [strong]</Code>
               </div>
               <p className='state-sm-hint'>
                 The &quot;x&quot; inherited the bold mark.

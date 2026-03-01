@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { CodeBlock, Card, CardHeader, CardContent } from '../../ui';
+import { CodeBlock, Code, Card, CardHeader, CardContent } from '../../ui';
 
 export default function ProseMirrorSchema() {
   return (
@@ -58,7 +58,7 @@ export default function ProseMirrorSchema() {
             />
           </div>
           <p className='section-note'>
-            <strong>What you&apos;re seeing:</strong> <code>doc</code> contains
+            <strong>What you&apos;re seeing:</strong> <Code>doc</Code> contains
             blocks (paragraph, blockquote). Paragraphs contain inline content
             (text with optional marks). The schema defines these rules.
           </p>
@@ -112,7 +112,7 @@ export default function ProseMirrorSchema() {
             <div className='schema-compare-panel invalid'>
               <h5>❌ Invalid</h5>
               <p>
-                Raw text directly in <code>doc</code>
+                Raw text directly in <Code>doc</Code>
               </p>
               <div className='schema-mini-tree'>
                 <span className='node'>doc</span>
@@ -127,7 +127,7 @@ export default function ProseMirrorSchema() {
             <div className='schema-compare-panel valid'>
               <h5>✅ Valid</h5>
               <p>
-                Text wrapped in a <code>paragraph</code>
+                Text wrapped in a <Code>paragraph</Code>
               </p>
               <div className='schema-mini-tree'>
                 <span className='node'>doc</span>
@@ -143,9 +143,9 @@ export default function ProseMirrorSchema() {
           </div>
 
           <p className='schema-rules-summary'>
-            <strong>In plain terms:</strong> <code>doc</code> = &quot;I only
-            take blocks.&quot; <code>paragraph</code> = &quot;I take text (with
-            optional bold/italic).&quot; <code>blockquote</code> = &quot;I take
+            <strong>In plain terms:</strong> <Code>doc</Code> = &quot;I only
+            take blocks.&quot; <Code>paragraph</Code> = &quot;I take text (with
+            optional bold/italic).&quot; <Code>blockquote</Code> = &quot;I take
             blocks.&quot; The tree below shows a valid document that follows
             these rules.
           </p>
@@ -190,40 +190,40 @@ export default function ProseMirrorSchema() {
         </CardHeader>
         <CardContent>
           <p>
-            The <code>content</code> field uses a regex-like syntax to specify
+            The <Code>content</Code> field uses a regex-like syntax to specify
             valid child sequences.
           </p>
           <div className='content-expr-grid'>
             <div className='content-expr-item'>
-              <code>paragraph</code>
+              <Code>paragraph</Code>
               <span>Exactly one paragraph</span>
             </div>
             <div className='content-expr-item'>
-              <code>block+</code>
+              <Code>block+</Code>
               <span>One or more block nodes</span>
             </div>
             <div className='content-expr-item'>
-              <code>inline*</code>
+              <Code>inline*</Code>
               <span>Zero or more inline nodes</span>
             </div>
             <div className='content-expr-item'>
-              <code>caption?</code>
+              <Code>caption?</Code>
               <span>Zero or one caption</span>
             </div>
             <div className='content-expr-item'>
-              <code>paragraph | blockquote</code>
+              <Code>paragraph | blockquote</Code>
               <span>Either paragraph or blockquote</span>
             </div>
             <div className='content-expr-item'>
-              <code>heading paragraph+</code>
+              <Code>heading paragraph+</Code>
               <span>Heading, then one or more paragraphs</span>
             </div>
             <div className='content-expr-item'>
-              <code>block{'{2}'}</code>
+              <Code>block{'{2}'}</Code>
               <span>Exactly 2 blocks</span>
             </div>
             <div className='content-expr-item'>
-              <code>block{'{1,5}'}</code>
+              <Code>block{'{1,5}'}</Code>
               <span>1 to 5 blocks</span>
             </div>
           </div>
@@ -236,17 +236,17 @@ export default function ProseMirrorSchema() {
         </CardHeader>
         <CardContent>
           <p>
-            Add <code>group: &quot;block&quot;</code> to node specs. Use{' '}
-            <code>block+</code> in content expressions instead of listing types.
+            Add <Code>group: &quot;block&quot;</Code> to node specs. Use{' '}
+            <Code>block+</Code> in content expressions instead of listing types.
           </p>
           <div className='schema-groups-visual'>
             <div className='group-equivalence'>
-              <code>block+</code>
+              <Code>block+</Code>
               <span className='equiv-arrow'>≡</span>
-              <code>
+              <Code>
                 (paragraph | blockquote | heading | code_block |
                 horizontal_rule)+
-              </code>
+              </Code>
             </div>
             <div className='group-members'>
               <span className='group-tag'>block group</span>
@@ -268,23 +268,23 @@ export default function ProseMirrorSchema() {
           <p>
             By default, nodes with inline content allow <strong>all</strong>{' '}
             marks. But some nodes shouldn&apos;t. Headings often stay plain,
-            and <code>code_block</code> should never have bold or links. Use the{' '}
-            <code>marks</code> property on a node spec to control which marks
+            and <Code>code_block</Code> should never have bold or links. Use the{' '}
+            <Code>marks</Code> property on a node spec to control which marks
             are allowed.
           </p>
           <div className='content-expr-grid'>
             <div className='content-expr-item'>
-              <code>marks: &quot;_&quot;</code>
+              <Code>marks: &quot;_&quot;</Code>
               <span>
                 Wildcard: all marks allowed (default for inline content)
               </span>
             </div>
             <div className='content-expr-item'>
-              <code>marks: &quot;&quot;</code>
+              <Code>marks: &quot;&quot;</Code>
               <span>Empty string: no marks (plain text only)</span>
             </div>
             <div className='content-expr-item'>
-              <code>marks: &quot;strong em link&quot;</code>
+              <Code>marks: &quot;strong em link&quot;</Code>
               <span>Space-separated list: only these marks allowed</span>
             </div>
           </div>
@@ -303,7 +303,7 @@ code_block: { content: "text*", group: "block", marks: "" }`}
           <p className='section-note'>
             The value is a space-separated string of mark names or mark groups.
             Invalid marks are stripped during transforms. For example, pasting
-            formatted text into a <code>code_block</code> loses the formatting.
+            formatted text into a <Code>code_block</Code> loses the formatting.
           </p>
         </CardContent>
       </Card>
@@ -315,13 +315,13 @@ code_block: { content: "text*", group: "block", marks: "" }`}
         <CardContent>
           <ul className='schema-learn-list'>
             <li>
-              <strong>Content expressions:</strong> Regex-like: <code>+</code>{' '}
-              one or more, <code>*</code> zero or more, <code>|</code> choice.
+              <strong>Content expressions:</strong> Regex-like: <Code>+</Code>{' '}
+              one or more, <Code>*</Code> zero or more, <Code>|</Code> choice.
             </li>
             <li>
               <strong>Node groups:</strong>{' '}
-              <code>group: &quot;block&quot;</code> lets you write{' '}
-              <code>block+</code> instead of listing types.
+              <Code>group: &quot;block&quot;</Code> lets you write{' '}
+              <Code>block+</Code> instead of listing types.
             </li>
             <li>
               <strong>Order matters:</strong> When filling required content,
@@ -333,7 +333,7 @@ code_block: { content: "text*", group: "block", marks: "" }`}
             </li>
             <li>
               <strong>Required types:</strong> Every schema must define a
-              top-level node (default <code>doc</code>) and a <code>text</code>{' '}
+              top-level node (default <Code>doc</Code>) and a <Code>text</Code>{' '}
               type.
             </li>
             <li>

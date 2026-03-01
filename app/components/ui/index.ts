@@ -27,6 +27,7 @@ export {
 } from './icons';
 export { Spacer } from './Spacer';
 export { CodeBlock } from './CodeBlock';
+export { Code } from './Code';
 export { Text } from './Text';
 export { Heading } from './Heading';
 export { Subtitle } from './Subtitle';

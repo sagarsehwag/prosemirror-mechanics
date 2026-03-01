@@ -171,6 +171,12 @@ export function useProseMirrorEditor(onTransaction: OnTransactionCallback) {
             const inputType = event instanceof InputEvent ? event.inputType : 'unknown';
             lastDomEventRef.current = `input: inputType="${inputType}"`;
           },
+          mousedown() {
+            lastDomEventRef.current = 'mouse: mousedown';
+          },
+          mouseup() {
+            lastDomEventRef.current = 'mouse: mouseup';
+          },
           paste() { lastDomEventRef.current = 'paste'; },
           cut() { lastDomEventRef.current = 'cut'; },
         },
@@ -208,11 +214,18 @@ export function useProseMirrorEditor(onTransaction: OnTransactionCallback) {
           const type = classifyTransaction(tr, stepJsons);
           const id = ++txIdRef.current;
 
+          // Selection-only transactions never come from insertText (that fires on content change).
+          // If we see insertText here, it's stale from a previous action (e.g. mouse selection).
+          let lastDomEvent = lastDomEventRef.current;
+          if (type === 'selection' && lastDomEvent?.includes('insertText')) {
+            lastDomEvent = 'selection (keyboard or mouse)';
+          }
+
           const record: TransactionRecord = {
             id,
             type,
             time: new Date().toLocaleTimeString('en', { hour12: false }),
-            source: lastDomEventRef.current || 'programmatic',
+            source: lastDomEvent || 'programmatic',
             steps: buildStepInfos(tr, stepJsons),
             charsBefore,
             charsAfter,
@@ -227,7 +240,7 @@ export function useProseMirrorEditor(onTransaction: OnTransactionCallback) {
             afterDoc,
             beforeRendered,
             afterRendered,
-            lastDomEvent: lastDomEventRef.current,
+            lastDomEvent,
             resolvedPos: getResolvedPosInfo(newState),
           };
 

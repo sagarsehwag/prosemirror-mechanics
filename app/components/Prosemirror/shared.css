@@ -170,7 +170,7 @@
 }
 
 .doc-tree {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-sm);
 }
 
@@ -296,7 +296,7 @@
 
 /* Block vs Inline hierarchy tree */
 .block-inline-tree {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-code);
   font-size: var(--font-size-2sm);
   padding: var(--gap-md);
   background: var(--bg-primary);

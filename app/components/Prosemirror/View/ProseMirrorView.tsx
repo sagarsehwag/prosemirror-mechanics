@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { CodeBlock, Card, CardHeader, CardContent } from '../../ui';
+import { CodeBlock, Code, Card, CardHeader, CardContent } from '../../ui';
 
 type ViewSubTab = 'overview' | 'decorations';
 
@@ -36,13 +36,13 @@ export default function ProseMirrorView() {
             <CardContent>
               <p>
                 The <strong>EditorView</strong> is the UI layer. It reads{' '}
-                <code>state.doc</code> and renders it to the DOM, handles user
+                <Code>state.doc</Code> and renders it to the DOM, handles user
                 input (keyboard, mouse, clipboard), and dispatches transactions
                 when the user edits.
               </p>
               <p>
                 You create it with{' '}
-                <code>new EditorView(element, {`{ state, dispatch }`})</code>.
+                <Code>new EditorView(element, {`{ state, dispatch }`})</Code>.
                 The view subscribes to state updates and re-renders when state
                 changes.
               </p>
@@ -56,7 +56,7 @@ export default function ProseMirrorView() {
               <p>
                 The view reads state to render. When the user types or selects,
                 the view creates a transaction and calls{' '}
-                <code>dispatch(tr)</code>. The owner (e.g. React) applies it and
+                <Code>dispatch(tr)</Code>. The owner (e.g. React) applies it and
                 passes new state back; the view re-renders.
               </p>
               <div className='view-flow-diagram'>
@@ -83,7 +83,7 @@ export default function ProseMirrorView() {
             <CardContent>
               <ul className='view-responsibilities-list'>
                 <li>
-                  <strong>Rendering:</strong> Converts <code>state.doc</code>{' '}
+                  <strong>Rendering:</strong> Converts <Code>state.doc</Code>{' '}
                   to DOM nodes. Uses a node-view system for custom rendering.
                 </li>
                 <li>
@@ -92,11 +92,11 @@ export default function ProseMirrorView() {
                 </li>
                 <li>
                   <strong>Selection:</strong> Syncs{' '}
-                  <code>state.selection</code> with the DOM selection.
+                  <Code>state.selection</Code> with the DOM selection.
                 </li>
                 <li>
-                  <strong>Props:</strong> <code>editable</code>,{' '}
-                  <code>attributes</code>, event handlers. Passed when creating
+                  <strong>Props:</strong> <Code>editable</Code>,{' '}
+                  <Code>attributes</Code>, event handlers. Passed when creating
                   the view.
                 </li>
               </ul>
@@ -122,8 +122,8 @@ export default function ProseMirrorView() {
               </div>
               <p className='section-note'>
                 In React, you typically use a wrapper (e.g.{' '}
-                <code>useEditorEffect</code> or a ref) to create the view and
-                wire <code>dispatchTransaction</code> to your state setter.
+                <Code>useEditorEffect</Code> or a ref) to create the view and
+                wire <Code>dispatchTransaction</Code> to your state setter.
               </p>
             </CardContent>
           </Card>
@@ -139,7 +139,7 @@ export default function ProseMirrorView() {
             <p>
               <strong>Decorations</strong> are visual overlays the view renders
               on top of the document without changing its content. They&apos;re
-              provided via <code>props.decorations</code> (typically from
+              provided via <Code>props.decorations</Code> (typically from
               plugins) and used for search highlights, syntax highlighting,
               placeholders, and inline widgets.
             </p>
@@ -173,22 +173,22 @@ const plugin = new Plugin({
             </div>
             <div className='view-deco-types'>
               <div className='view-deco-type'>
-                <code>Decoration.inline(from, to, attrs)</code>
+                <Code>Decoration.inline(from, to, attrs)</Code>
                 <p>Wrap a range with a span (highlight, underline)</p>
               </div>
               <div className='view-deco-type'>
-                <code>Decoration.widget(pos, spec)</code>
+                <Code>Decoration.widget(pos, spec)</Code>
                 <p>Insert a widget at a position (placeholder, cursor)</p>
               </div>
               <div className='view-deco-type'>
-                <code>Decoration.node(from, to, attrs)</code>
+                <Code>Decoration.node(from, to, attrs)</Code>
                 <p>Add attributes to a block node</p>
               </div>
             </div>
             <p className='section-note'>
-              The view merges all <code>props.decorations</code> from plugins
+              The view merges all <Code>props.decorations</Code> from plugins
               and renders them when drawing the document.{' '}
-              <code>DecorationSet.map(tr.mapping)</code> updates positions when
+              <Code>DecorationSet.map(tr.mapping)</Code> updates positions when
               the doc changes.
             </p>
           </CardContent>
